@@ -1,0 +1,230 @@
+09/05/2016,16:30:03:138 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:03:138 spdLicenseAdapter: Tentativa 1 de 10
+09/05/2016,16:30:03:138 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:30:03:153 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:03:153 spdLicense: Obtendo Código.
+09/05/2016,16:30:03:153 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+09/05/2016,16:30:03:153 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+09/05/2016,16:30:06:841 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+09/05/2016,16:30:06:856 spdLicenseAdapter: EXCEPTION: EXCEPTION, spdClientLicense, 
+09/05/2016,16:30:06:856 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:06:856 spdLicenseAdapter: Restaurando backup.
+09/05/2016,16:30:06:872 spdLicenseAdapter: Não consta licença para esse CNPJ no arquivo.
+09/05/2016,16:30:06:888 spdLicenseAdapter: Tentativa 2 de 10
+09/05/2016,16:30:06:888 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:30:06:888 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:06:888 spdLicense: Obtendo Código.
+09/05/2016,16:30:06:903 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+09/05/2016,16:30:06:903 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+09/05/2016,16:30:07:825 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+09/05/2016,16:30:07:841 spdLicenseAdapter: EXCEPTION: EXCEPTION, spdClientLicense, 
+09/05/2016,16:30:07:856 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:07:856 spdLicenseAdapter: Restaurando backup.
+09/05/2016,16:30:07:856 spdLicenseAdapter: Não consta licença para esse CNPJ no arquivo.
+09/05/2016,16:30:07:872 spdLicenseAdapter: Tentativa 3 de 10
+09/05/2016,16:30:07:872 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:30:07:872 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:07:872 spdLicense: Obtendo Código.
+09/05/2016,16:30:07:872 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+09/05/2016,16:30:07:872 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+09/05/2016,16:30:08:809 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+09/05/2016,16:30:10:247 spdLicenseAdapter: EXCEPTION: EXCEPTION, spdClientLicense, 
+09/05/2016,16:30:10:263 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:10:263 spdLicenseAdapter: Restaurando backup.
+09/05/2016,16:30:10:278 spdLicenseAdapter: Não consta licença para esse CNPJ no arquivo.
+09/05/2016,16:30:10:278 spdLicenseAdapter: Tentativa 4 de 10
+09/05/2016,16:30:10:294 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:30:10:294 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:10:294 spdLicense: Obtendo Código.
+09/05/2016,16:30:10:294 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+09/05/2016,16:30:10:294 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+09/05/2016,16:30:13:763 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+09/05/2016,16:30:13:763 spdLicenseAdapter: EXCEPTION: EXCEPTION, spdClientLicense, 
+09/05/2016,16:30:13:778 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:13:778 spdLicenseAdapter: Restaurando backup.
+09/05/2016,16:30:13:794 spdLicenseAdapter: Não consta licença para esse CNPJ no arquivo.
+09/05/2016,16:30:13:794 spdLicenseAdapter: Tentativa 5 de 10
+09/05/2016,16:30:13:794 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:30:13:809 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:13:809 spdLicense: Obtendo Código.
+09/05/2016,16:30:13:809 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+09/05/2016,16:30:13:809 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+09/05/2016,16:30:14:825 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+09/05/2016,16:30:14:841 spdLicenseAdapter: EXCEPTION: EXCEPTION, spdClientLicense, 
+09/05/2016,16:30:14:841 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:14:841 spdLicenseAdapter: Restaurando backup.
+09/05/2016,16:30:14:856 spdLicenseAdapter: Não consta licença para esse CNPJ no arquivo.
+09/05/2016,16:30:14:856 spdLicenseAdapter: Tentativa 6 de 10
+09/05/2016,16:30:14:872 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:30:14:872 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:14:872 spdLicense: Obtendo Código.
+09/05/2016,16:30:14:872 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+09/05/2016,16:30:14:872 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+09/05/2016,16:30:15:809 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+09/05/2016,16:30:15:825 spdLicenseAdapter: EXCEPTION: EXCEPTION, spdClientLicense, 
+09/05/2016,16:30:15:825 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:15:841 spdLicenseAdapter: Restaurando backup.
+09/05/2016,16:30:15:841 spdLicenseAdapter: Não consta licença para esse CNPJ no arquivo.
+09/05/2016,16:30:15:856 spdLicenseAdapter: Tentativa 7 de 10
+09/05/2016,16:30:15:856 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:30:15:856 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:15:856 spdLicense: Obtendo Código.
+09/05/2016,16:30:15:872 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+09/05/2016,16:30:15:872 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+09/05/2016,16:30:16:903 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+09/05/2016,16:30:16:903 spdLicenseAdapter: EXCEPTION: EXCEPTION, spdClientLicense, 
+09/05/2016,16:30:16:919 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:16:919 spdLicenseAdapter: Restaurando backup.
+09/05/2016,16:30:16:934 spdLicenseAdapter: Não consta licença para esse CNPJ no arquivo.
+09/05/2016,16:30:16:934 spdLicenseAdapter: Tentativa 8 de 10
+09/05/2016,16:30:16:934 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:30:16:934 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:16:934 spdLicense: Obtendo Código.
+09/05/2016,16:30:16:950 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+09/05/2016,16:30:16:950 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+09/05/2016,16:30:17:903 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+09/05/2016,16:30:17:903 spdLicenseAdapter: EXCEPTION: EXCEPTION, spdClientLicense, 
+09/05/2016,16:30:17:903 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:17:903 spdLicenseAdapter: Restaurando backup.
+09/05/2016,16:30:17:919 spdLicenseAdapter: Não consta licença para esse CNPJ no arquivo.
+09/05/2016,16:30:17:919 spdLicenseAdapter: Tentativa 9 de 10
+09/05/2016,16:30:17:919 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:30:17:919 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:17:919 spdLicense: Obtendo Código.
+09/05/2016,16:30:17:919 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+09/05/2016,16:30:17:934 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+09/05/2016,16:30:18:997 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+09/05/2016,16:30:18:997 spdLicenseAdapter: EXCEPTION: EXCEPTION, spdClientLicense, 
+09/05/2016,16:30:18:997 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:19:013 spdLicenseAdapter: Restaurando backup.
+09/05/2016,16:30:19:013 spdLicenseAdapter: Não consta licença para esse CNPJ no arquivo.
+09/05/2016,16:30:19:028 spdLicenseAdapter: Tentativa 10 de 10
+09/05/2016,16:30:19:028 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:30:19:028 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:19:028 spdLicense: Obtendo Código.
+09/05/2016,16:30:19:044 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+09/05/2016,16:30:19:044 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+09/05/2016,16:30:20:091 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+09/05/2016,16:30:20:106 spdLicenseAdapter: EXCEPTION: EXCEPTION, spdClientLicense, 
+09/05/2016,16:30:20:122 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:20:122 spdLicenseAdapter: Restaurando backup.
+09/05/2016,16:30:20:122 spdLicenseAdapter: Não consta licença para esse CNPJ no arquivo.
+09/05/2016,16:30:20:122 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:20:138 spdLicenseAdapter: Restaurando backup.
+09/05/2016,16:30:20:138 spdLicense: Validando o arquivo.
+09/05/2016,16:30:20:138 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:20:138 spdLicense: Obtendo Código.
+09/05/2016,16:30:20:138 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+09/05/2016,16:30:20:153 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+09/05/2016,16:30:21:059 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+09/05/2016,16:30:21:075 spdLicense: EXCEPTION: EXCEPTION, spdClientLicense, 
+09/05/2016,16:30:21:075 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:30:21:091 spdLicenseAdapter: Restaurando backup.
+09/05/2016,16:30:21:091 spdLicenseAdapter: Não consta licença para esse CNPJ no arquivo.
+09/05/2016,16:31:02:972 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:31:02:988 spdLicenseAdapter: Tentativa 1 de 10
+09/05/2016,16:31:02:988 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:31:02:988 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:31:02:988 spdLicense: Obtendo Código.
+09/05/2016,16:31:02:988 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+09/05/2016,16:31:02:988 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+09/05/2016,16:31:03:126 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+09/05/2016,16:31:03:126 spdClienteLicense: Código retornado: 702059
+09/05/2016,16:31:03:126 spdLicense: Código obtido: 702059
+09/05/2016,16:31:03:141 spdLicense: Verificando se precisa baixar a licença: -1
+09/05/2016,16:31:03:156 spdLicense: Obtendo Código.
+09/05/2016,16:31:03:156 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: LICENCA=702059
+09/05/2016,16:31:03:187 spdLicense: Resultado da requisição gravada no License.dat: 5662<1<012$7=70z|j}2L@A[FAHÌ?ALFN/[JLA@\_JJK#kn{j2=;%32;?:%32;=?>9#djv2=;8678<9?##kn{jjal`kj2?6%32;?:%32;=?>9s
+09/05/2016,16:31:03:202 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:31:03:202 spdLicense: Verificando se baixou a licença hoje: -1
+09/05/2016,16:31:03:202 spdLicense: Verificando a hash.
+09/05/2016,16:31:03:202 spdLicense: Validando o arquivo.
+09/05/2016,16:31:03:218 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:31:03:218 spdLicense: Verificando se baixou a licença hoje: -1
+09/05/2016,16:31:03:218 spdLicense: Verificando a hash.
+09/05/2016,16:31:03:218 spdLicense: Verificando a data
+09/05/2016,16:31:03:233 spdLicenseAdapter: Licença validada com sucesso.
+09/05/2016,16:31:03:508 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:31:03:524 spdLicenseAdapter: Tentativa 1 de 10
+09/05/2016,16:31:03:524 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:31:03:524 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:31:03:539 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:31:03:539 spdLicense: Verificando se baixou a licença hoje: -1
+09/05/2016,16:31:03:539 spdLicense: Validando o arquivo.
+09/05/2016,16:31:03:539 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:31:03:554 spdLicense: Verificando se baixou a licença hoje: -1
+09/05/2016,16:31:03:554 spdLicense: Verificando a hash.
+09/05/2016,16:31:03:554 spdLicense: Verificando a data
+09/05/2016,16:31:03:554 spdLicenseAdapter: Licença validada com sucesso.
+09/05/2016,16:31:03:631 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:31:03:631 spdLicenseAdapter: Tentativa 1 de 10
+09/05/2016,16:31:03:646 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:31:03:646 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:31:03:646 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:31:03:646 spdLicense: Verificando se baixou a licença hoje: -1
+09/05/2016,16:31:03:646 spdLicense: Validando o arquivo.
+09/05/2016,16:31:03:662 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:31:03:662 spdLicense: Verificando se baixou a licença hoje: -1
+09/05/2016,16:31:03:662 spdLicense: Verificando a hash.
+09/05/2016,16:31:03:662 spdLicense: Verificando a data
+09/05/2016,16:31:03:662 spdLicenseAdapter: Licença validada com sucesso.
+09/05/2016,16:36:24:139 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:36:24:155 spdLicenseAdapter: Tentativa 1 de 10
+09/05/2016,16:36:24:155 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:36:24:155 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:36:24:155 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:36:24:171 spdLicense: Verificando se baixou a licença hoje: -1
+09/05/2016,16:36:24:171 spdLicense: Validando o arquivo.
+09/05/2016,16:36:24:171 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:36:24:171 spdLicense: Verificando se baixou a licença hoje: -1
+09/05/2016,16:36:24:171 spdLicense: Verificando a hash.
+09/05/2016,16:36:24:186 spdLicense: Verificando a data
+09/05/2016,16:36:24:186 spdLicenseAdapter: Licença validada com sucesso.
+09/05/2016,16:37:09:530 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:37:09:530 spdLicenseAdapter: Tentativa 1 de 10
+09/05/2016,16:37:09:530 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:37:09:530 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:37:09:546 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:37:09:546 spdLicense: Verificando se baixou a licença hoje: -1
+09/05/2016,16:37:09:546 spdLicense: Validando o arquivo.
+09/05/2016,16:37:09:546 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:37:09:561 spdLicense: Verificando se baixou a licença hoje: -1
+09/05/2016,16:37:09:561 spdLicense: Verificando a hash.
+09/05/2016,16:37:09:561 spdLicense: Verificando a data
+09/05/2016,16:37:09:561 spdLicenseAdapter: Licença validada com sucesso.
+09/05/2016,16:37:09:639 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:37:09:655 spdLicenseAdapter: Tentativa 1 de 10
+09/05/2016,16:37:09:655 spdLicenseAdapter: Validando a licença.
+09/05/2016,16:37:09:655 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:37:09:655 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:37:09:655 spdLicense: Verificando se baixou a licença hoje: -1
+09/05/2016,16:37:09:655 spdLicense: Validando o arquivo.
+09/05/2016,16:37:09:671 spdLicense: Verificando se precisa baixar a licença: 0
+09/05/2016,16:37:09:671 spdLicense: Verificando se baixou a licença hoje: -1
+09/05/2016,16:37:09:671 spdLicense: Verificando a hash.
+09/05/2016,16:37:09:671 spdLicense: Verificando a data
+09/05/2016,16:37:09:686 spdLicenseAdapter: Licença validada com sucesso.

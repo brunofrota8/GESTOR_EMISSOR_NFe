@@ -1,0 +1,12 @@
+[10/05/2016 16:48:26:690] 3712 - EspdCertStoreException : Não foi possível carregar o certificado "CN=ELASTOTEC INDUSTRIA E COMERCIO DE ARTEFATOS DE BO:54988308000116, OU=AR FACESP, O=ICP-Brasil, C=BR, S=SP, L=SOROCABA, E=
+" devido ao seguinte problema: "Certificado não encontrado."
+[10/05/2016 16:48:26:721] 3712 - EspdNFeConfigException : Erro ao carregar configurações: Não foi possível carregar o certificado "CN=ELASTOTEC INDUSTRIA E COMERCIO DE ARTEFATOS DE BO:54988308000116, OU=AR FACESP, O=ICP-Brasil, C=BR, S=SP, L=SOROCABA, E=
+" devido ao seguinte problema: "Certificado não encontrado."
+[11/05/2016 17:06:12:549] 2160 - EspdCertStoreException : Não foi possível carregar o certificado "CN=ELASTOTEC INDUSTRIA E COMERCIO DE ARTEFATOS DE BO:54988308000116, OU=AR FACESP, O=ICP-Brasil, C=BR, S=SP, L=SOROCABA, E=
+" devido ao seguinte problema: "Certificado não encontrado."
+[11/05/2016 17:06:12:596] 2160 - EspdNFeConfigException : Erro ao carregar configurações: Não foi possível carregar o certificado "CN=ELASTOTEC INDUSTRIA E COMERCIO DE ARTEFATOS DE BO:54988308000116, OU=AR FACESP, O=ICP-Brasil, C=BR, S=SP, L=SOROCABA, E=
+" devido ao seguinte problema: "Certificado não encontrado."
+[11/05/2016 17:06:56:877] 3488 - EspdCertStoreException : Não foi possível carregar o certificado "CN=
+" devido ao seguinte problema: "Certificado não encontrado."
+[11/05/2016 17:06:56:909] 3488 - EspdNFeConfigException : Erro ao carregar configurações: Não foi possível carregar o certificado "CN=
+" devido ao seguinte problema: "Certificado não encontrado."
