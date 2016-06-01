@@ -891,7 +891,7 @@ Inicializar_ArquivoINI
 'Define o Ambiente
 
 spd_NFe.Ambiente = akHomologacao
-spd_NFe.Ambiente = akProducao               'SUPER IMPORTANTE CUIDADO
+'spd_NFe.Ambiente = akProducao               'SUPER IMPORTANTE CUIDADO
 
 CARREGA_TEXT_SPD_NFe
 

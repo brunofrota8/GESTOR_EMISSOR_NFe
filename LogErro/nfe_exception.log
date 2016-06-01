@@ -10,3 +10,4 @@
 " devido ao seguinte problema: "Certificado não encontrado."
 [11/05/2016 17:06:56:909] 3488 - EspdNFeConfigException : Erro ao carregar configurações: Não foi possível carregar o certificado "CN=
 " devido ao seguinte problema: "Certificado não encontrado."
+[01/06/2016 10:19:42:613] 3464 - EspdNFeConfigException : Arquivo "C:\Arquivos de programas\Microsoft Visual Studio\VB98\app.Path\TecnoSpeed_Arquivos\nfeServidoresHom.ini" de servidores de homologação não encontrado
