@@ -11,3 +11,10 @@
 [11/05/2016 17:06:56:909] 3488 - EspdNFeConfigException : Erro ao carregar configurações: Não foi possível carregar o certificado "CN=
 " devido ao seguinte problema: "Certificado não encontrado."
 [01/06/2016 10:19:42:613] 3464 - EspdNFeConfigException : Arquivo "C:\Arquivos de programas\Microsoft Visual Studio\VB98\app.Path\TecnoSpeed_Arquivos\nfeServidoresHom.ini" de servidores de homologação não encontrado
+[08/06/2016 16:17:10:577] 3772 - EspdNFeException : Este método está obsoleto. Utilize: EnviarNotaDestinatario ou EnviarNotaDestinatarioAnexos
+[08/06/2016 16:35:06:048] 3772 - EspdSchemaValidationException : O arquivo contém 1 ou mais erros no de validação de esquema 'onsSitNFe versa' viola a restrição pattern de '[0-9]{15}'.
+Falha da análise do elemento '{http://www.portalfiscal.inf.br/nfe}nRec' com valor 'onsSitNFe versa'
+[08/06/2016 16:35:09:314] 3772 - EspdSchemaValidationException : O arquivo contém 1 ou mais erros no de validação de esquema 'onsSitNFe versa' viola a restrição pattern de '[0-9]{15}'.
+Falha da análise do elemento '{http://www.portalfiscal.inf.br/nfe}nRec' com valor 'onsSitNFe versa'
+[08/06/2016 16:39:55:204] 3772 - EspdNFeException : Erro ao consultar recibo: A conexão com o servidor foi reconfigurada - URL:https://homologacao.nfe.fazenda.sp.gov.br/ws/nferetautorizacao.asmx - SOAPAction:http://www.portalfiscal.inf.br/nfe/wsdl/NfeRetAutorizacao/NfeRetAutorizacaoLote
+[08/06/2016 16:47:03:985] 3772 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário

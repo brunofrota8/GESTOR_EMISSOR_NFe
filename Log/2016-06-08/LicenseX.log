@@ -1,0 +1,52 @@
+08/06/2016,16:52:28:206 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:222 spdLicenseAdapter: Tentativa 1 de 10
+08/06/2016,16:52:28:222 spdLicenseAdapter: Validando a licença.
+08/06/2016,16:52:28:237 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:237 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:237 spdLicense: Verificando se baixou a licença hoje: 0
+08/06/2016,16:52:28:253 spdLicense: Obtendo Código.
+08/06/2016,16:52:28:253 spdLicense: Código da licença não obtido. Tentando obter o código novamente.
+08/06/2016,16:52:28:253 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: CNPJ=54988308000116 
+ PRODUTO=0000000019 
+ VERSAO=7.7.30.47270
+08/06/2016,16:52:28:534 spdClienteLicense: Verificando se o servidor retornou a licença corretamente.
+08/06/2016,16:52:28:550 spdClienteLicense: Código retornado: 90006
+08/06/2016,16:52:28:550 spdLicense: Código obtido: 90006
+08/06/2016,16:52:28:565 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:565 spdLicense: Verificando se baixou a licença hoje: 0
+08/06/2016,16:52:28:581 spdLicense: Obtendo Código.
+08/06/2016,16:52:28:581 spdClienteLicense: Fazendo a requisição para o servidor com os parâmetros: LICENCA=90006
+08/06/2016,16:52:28:659 spdLicense: Resultado da requisição gravada no License.dat: <35=3262=$$5<=1rtbu:DHISNI@ÄIDNF'SBDIHTWBBC+cfsb:54(71(5761+lb~:5371302?3++cfsbbidhcb:7?(71(5761{
+08/06/2016,16:52:28:690 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:690 spdLicense: Verificando se baixou a licença hoje: -1
+08/06/2016,16:52:28:706 spdLicense: Verificando a hash.
+08/06/2016,16:52:28:706 spdLicense: Validando o arquivo.
+08/06/2016,16:52:28:706 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:706 spdLicense: Verificando se baixou a licença hoje: -1
+08/06/2016,16:52:28:722 spdLicense: Verificando a hash.
+08/06/2016,16:52:28:722 spdLicense: Verificando a data
+08/06/2016,16:52:28:722 spdLicenseAdapter: Licença validada com sucesso.
+08/06/2016,16:52:28:847 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:847 spdLicenseAdapter: Tentativa 1 de 10
+08/06/2016,16:52:28:847 spdLicenseAdapter: Validando a licença.
+08/06/2016,16:52:28:862 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:862 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:862 spdLicense: Verificando se baixou a licença hoje: -1
+08/06/2016,16:52:28:862 spdLicense: Validando o arquivo.
+08/06/2016,16:52:28:878 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:878 spdLicense: Verificando se baixou a licença hoje: -1
+08/06/2016,16:52:28:878 spdLicense: Verificando a hash.
+08/06/2016,16:52:28:878 spdLicense: Verificando a data
+08/06/2016,16:52:28:878 spdLicenseAdapter: Licença validada com sucesso.
+08/06/2016,16:52:28:972 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:972 spdLicenseAdapter: Tentativa 1 de 10
+08/06/2016,16:52:28:972 spdLicenseAdapter: Validando a licença.
+08/06/2016,16:52:28:987 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:987 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:28:987 spdLicense: Verificando se baixou a licença hoje: -1
+08/06/2016,16:52:28:987 spdLicense: Validando o arquivo.
+08/06/2016,16:52:29:003 spdLicense: Verificando se precisa baixar a licença: 0
+08/06/2016,16:52:29:003 spdLicense: Verificando se baixou a licença hoje: -1
+08/06/2016,16:52:29:003 spdLicense: Verificando a hash.
+08/06/2016,16:52:29:003 spdLicense: Verificando a data
+08/06/2016,16:52:29:003 spdLicenseAdapter: Licença validada com sucesso.
