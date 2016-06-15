@@ -1,40 +1,42 @@
 VERSION 5.00
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "ComDlg32.OCX"
 Begin VB.Form Form_Emissor_NFe 
+   BackColor       =   &H00C0C0C0&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Gestor Emissor NF-e"
-   ClientHeight    =   8385
+   ClientHeight    =   8520
    ClientLeft      =   45
    ClientTop       =   435
-   ClientWidth     =   13905
+   ClientWidth     =   13815
    Icon            =   "Form_Emissor_NFe.frx":0000
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   8385
-   ScaleWidth      =   13905
+   ScaleHeight     =   8520
+   ScaleWidth      =   13815
    StartUpPosition =   3  'Windows Default
    Begin MSComDlg.CommonDialog Common_ShowOpen_XML 
-      Left            =   1305
-      Top             =   900
+      Left            =   12675
+      Top             =   8040
       _ExtentX        =   847
       _ExtentY        =   847
       _Version        =   393216
    End
    Begin MSComDlg.CommonDialog Common_ShowSave 
-      Left            =   720
-      Top             =   900
+      Left            =   12090
+      Top             =   8040
       _ExtentX        =   847
       _ExtentY        =   847
       _Version        =   393216
    End
    Begin VB.Frame Frame5 
+      BackColor       =   &H00C0C0C0&
       Height          =   735
-      Left            =   135
+      Left            =   75
       TabIndex        =   36
-      Top             =   5355
-      Width           =   13635
+      Top             =   5595
+      Width           =   13695
       Begin VB.ComboBox cbo_Versao 
          BackColor       =   &H000000FF&
          BeginProperty Font 
@@ -49,39 +51,67 @@ Begin VB.Form Form_Emissor_NFe
          ForeColor       =   &H80000002&
          Height          =   315
          ItemData        =   "Form_Emissor_NFe.frx":08CA
-         Left            =   11025
+         Left            =   12300
          List            =   "Form_Emissor_NFe.frx":08D7
          TabIndex        =   43
-         Top             =   270
+         Top             =   360
          Visible         =   0   'False
-         Width           =   1095
+         Width           =   1365
       End
       Begin VB.TextBox txt_Recibo 
          Appearance      =   0  'Flat
-         BackColor       =   &H80000000&
-         Height          =   285
-         Left            =   120
+         BackColor       =   &H00FBF7EE&
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   360
+         Left            =   1680
          TabIndex        =   39
-         Top             =   360
-         Width           =   1575
+         Top             =   300
+         Width           =   2325
       End
       Begin VB.TextBox txt_Protocolo 
          Appearance      =   0  'Flat
-         BackColor       =   &H80000000&
-         Height          =   285
-         Left            =   1800
+         BackColor       =   &H00FBF7EE&
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   360
+         Left            =   4020
          TabIndex        =   38
-         Top             =   360
-         Width           =   1695
+         Top             =   300
+         Width           =   2355
       End
       Begin VB.TextBox txt_IDNFe 
          Appearance      =   0  'Flat
-         BackColor       =   &H80000000&
-         Height          =   285
-         Left            =   3600
+         BackColor       =   &H00FBF7EE&
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   360
+         Left            =   6390
          TabIndex        =   37
-         Top             =   360
-         Width           =   4680
+         Text            =   "123456789012345678901234567890123456789012345"
+         Top             =   300
+         Width           =   5550
       End
       Begin VB.Label Label12 
          Alignment       =   2  'Center
@@ -98,43 +128,46 @@ Begin VB.Form Form_Emissor_NFe
          EndProperty
          ForeColor       =   &H80000002&
          Height          =   210
-         Left            =   9360
+         Left            =   12060
          TabIndex        =   44
-         Top             =   315
+         Top             =   120
          Visible         =   0   'False
          Width           =   1620
       End
       Begin VB.Label Label8 
          AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
          Caption         =   "Recibo"
          Height          =   195
-         Left            =   120
+         Left            =   1680
          TabIndex        =   42
-         Top             =   165
+         Top             =   105
          Width           =   510
       End
       Begin VB.Label Label10 
          AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
          Caption         =   "Protocolo"
          Height          =   195
-         Left            =   1800
+         Left            =   4020
          TabIndex        =   41
-         Top             =   165
-         Width           =   675
+         Top             =   105
+         Width           =   705
       End
       Begin VB.Label Label11 
          AutoSize        =   -1  'True
+         BackColor       =   &H00C0C0C0&
          Caption         =   "ID da NFe"
          Height          =   195
-         Left            =   3600
+         Left            =   6390
          TabIndex        =   40
-         Top             =   165
+         Top             =   105
          Width           =   735
       End
    End
    Begin MSComDlg.CommonDialog Common_ShowOpen 
-      Left            =   135
-      Top             =   900
+      Left            =   11505
+      Top             =   8040
       _ExtentX        =   847
       _ExtentY        =   847
       _Version        =   393216
@@ -149,13 +182,13 @@ Begin VB.Form Form_Emissor_NFe
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   2040
-      Left            =   135
+      Height          =   2070
+      Left            =   75
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   34
-      Top             =   6210
-      Width           =   13620
+      Top             =   6390
+      Width           =   13680
    End
    Begin VB.Frame Frame2 
       Caption         =   "Funções"
@@ -168,113 +201,126 @@ Begin VB.Form Form_Emissor_NFe
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   1860
-      Left            =   135
+      Height          =   1560
+      Left            =   60
       TabIndex        =   32
-      Top             =   3330
-      Width           =   13605
+      Top             =   3990
+      Width           =   13695
       Begin VB.CommandButton cmd_Alterar_Modelo_Danfe 
          Caption         =   "ALTERAR MODELO DANFE"
          Height          =   375
-         Left            =   11205
+         Left            =   11415
+         Style           =   1  'Graphical
          TabIndex        =   46
-         Top             =   990
+         Top             =   1080
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Cancelar_NFe 
          Caption         =   "CANCELAR NF-e"
          Height          =   375
-         Left            =   11205
+         Left            =   11415
+         Style           =   1  'Graphical
          TabIndex        =   48
-         Top             =   630
+         Top             =   660
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Consultar_Situacao 
          Caption         =   "CONSULTAR SITUAÇÃO"
          Height          =   375
-         Left            =   9000
+         Left            =   9150
+         Style           =   1  'Graphical
          TabIndex        =   33
-         Top             =   630
+         Top             =   660
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Tudo 
          Caption         =   "ENVIAR NF-e >>>>>"
          Height          =   375
-         Left            =   6795
+         Left            =   6885
+         Style           =   1  'Graphical
          TabIndex        =   47
-         Top             =   630
+         Top             =   660
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Consultar_NFe 
          Caption         =   "CONSULTAR NF-e"
          Height          =   375
-         Left            =   4590
+         Left            =   4620
+         Style           =   1  'Graphical
          TabIndex        =   35
-         Top             =   630
+         Top             =   660
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Enviar_Email 
          Caption         =   "ENVIAR EMAIL"
          Height          =   375
-         Left            =   2385
+         Left            =   2355
+         Style           =   1  'Graphical
          TabIndex        =   49
-         Top             =   630
+         Top             =   660
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Imprimir_NFe 
          Caption         =   "IMPRIMIR NF-e"
          Height          =   375
-         Left            =   180
+         Left            =   90
+         Style           =   1  'Graphical
          TabIndex        =   45
-         Top             =   630
+         Top             =   660
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Visualizar_NFe 
          Caption         =   "VISUALIZAR NF-e"
          Height          =   375
-         Left            =   11205
+         Left            =   11415
+         Style           =   1  'Graphical
          TabIndex        =   6
-         Top             =   270
+         Top             =   240
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Baixar_XML_Autorizado 
          Caption         =   "DOWNLOAD XML"
          Height          =   375
-         Left            =   9000
+         Left            =   9150
+         Style           =   1  'Graphical
          TabIndex        =   5
-         Top             =   270
+         Top             =   240
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Consultar_Recibo 
          Caption         =   "CONSULTAR RECIBO"
          Height          =   375
-         Left            =   6795
+         Left            =   6885
+         Style           =   1  'Graphical
          TabIndex        =   4
-         Top             =   270
+         Top             =   240
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Enviar_XML 
          Caption         =   "ENVIAR XML"
          Height          =   375
-         Left            =   4590
+         Left            =   4620
+         Style           =   1  'Graphical
          TabIndex        =   3
-         Top             =   270
+         Top             =   240
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Assinar_XML 
          Caption         =   "ASSINAR XML"
          Height          =   375
-         Left            =   2385
+         Left            =   2355
+         Style           =   1  'Graphical
          TabIndex        =   2
-         Top             =   270
+         Top             =   240
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Gerar_XML 
          Caption         =   "GERAR XML (txt Sefaz)"
          Height          =   375
-         Left            =   180
+         Left            =   90
+         Style           =   1  'Graphical
          TabIndex        =   1
-         Top             =   270
+         Top             =   240
          Width           =   2220
       End
    End
@@ -289,58 +335,62 @@ Begin VB.Form Form_Emissor_NFe
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   1575
-      Left            =   6615
+      Height          =   1395
+      Left            =   60
       TabIndex        =   23
-      Top             =   1260
-      Width           =   7125
+      Top             =   2070
+      Width           =   13695
       Begin VB.TextBox txt_Arq_Esquemas 
-         Height          =   285
-         Left            =   120
+         BackColor       =   &H00FBF7EE&
+         Height          =   315
+         Left            =   7290
          TabIndex        =   27
          Text            =   "Esquemas\"
-         Top             =   1080
-         Width           =   2300
+         Top             =   450
+         Width           =   6285
       End
       Begin VB.TextBox txt_Arq_Templates 
-         Height          =   285
-         Left            =   2415
+         BackColor       =   &H00FBF7EE&
+         Height          =   315
+         Left            =   135
          TabIndex        =   26
          Text            =   "Templates\"
-         Top             =   1080
-         Width           =   2300
+         Top             =   990
+         Width           =   7155
       End
       Begin VB.TextBox txt_Arq_Servidores 
-         Height          =   285
+         BackColor       =   &H00FBF7EE&
+         Height          =   315
          Left            =   120
          TabIndex        =   25
-         Top             =   480
-         Width           =   6840
+         Top             =   450
+         Width           =   7140
       End
       Begin VB.TextBox txt_Arq_Logs 
-         Height          =   285
-         Left            =   4710
+         BackColor       =   &H00FBF7EE&
+         Height          =   315
+         Left            =   7320
          TabIndex        =   24
          Text            =   "Log\"
-         Top             =   1080
-         Width           =   2300
+         Top             =   990
+         Width           =   6255
       End
       Begin VB.Label Label4 
          AutoSize        =   -1  'True
          Caption         =   "Esquemas"
          Height          =   195
-         Left            =   120
+         Left            =   7290
          TabIndex        =   31
-         Top             =   840
+         Top             =   240
          Width           =   735
       End
       Begin VB.Label Label5 
          AutoSize        =   -1  'True
          Caption         =   "Templates"
          Height          =   195
-         Left            =   2415
+         Left            =   135
          TabIndex        =   30
-         Top             =   840
+         Top             =   780
          Width           =   735
       End
       Begin VB.Label Label6 
@@ -356,32 +406,45 @@ Begin VB.Form Form_Emissor_NFe
          AutoSize        =   -1  'True
          Caption         =   "Log"
          Height          =   195
-         Left            =   4755
+         Left            =   7365
          TabIndex        =   28
-         Top             =   840
+         Top             =   780
          Width           =   270
       End
    End
    Begin VB.CommandButton cmd_SalvarConfig_INI 
+      BackColor       =   &H00C0C0C0&
       Caption         =   "Salvar Configurações (INI)"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   375
-      Left            =   11520
+      Left            =   10830
+      Style           =   1  'Graphical
       TabIndex        =   22
-      Top             =   2880
-      Width           =   2220
+      Top             =   3540
+      Width           =   2940
    End
    Begin VB.Frame Frame1 
-      Height          =   1005
-      Left            =   135
+      BackColor       =   &H00E0E0E0&
+      Height          =   855
+      Left            =   45
       TabIndex        =   19
-      Top             =   90
-      Width           =   13605
+      Top             =   60
+      Width           =   13725
       Begin VB.ComboBox cbo_Certificado 
+         BackColor       =   &H00FBF7EE&
          Height          =   315
-         Left            =   90
+         Left            =   60
          TabIndex        =   20
-         Top             =   450
-         Width           =   13395
+         Top             =   360
+         Width           =   13515
       End
       Begin VB.Label Label1 
          AutoSize        =   -1  'True
@@ -396,13 +459,14 @@ Begin VB.Form Form_Emissor_NFe
             Strikethrough   =   0   'False
          EndProperty
          Height          =   195
-         Left            =   135
+         Left            =   75
          TabIndex        =   21
-         Top             =   225
+         Top             =   135
          Width           =   1950
       End
    End
    Begin VB.Frame Frame4 
+      BackColor       =   &H00E0E0E0&
       Caption         =   "Emitente"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
@@ -413,63 +477,70 @@ Begin VB.Form Form_Emissor_NFe
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   1575
-      Left            =   135
+      Height          =   945
+      Left            =   45
       TabIndex        =   0
-      Top             =   1260
-      Width           =   6315
+      Top             =   1020
+      Width           =   13725
       Begin VB.ComboBox cbo_UF_Remetente 
+         BackColor       =   &H00FBF7EE&
          Height          =   315
          Left            =   135
          TabIndex        =   18
          Text            =   "SP"
-         Top             =   480
+         Top             =   450
          Width           =   780
       End
       Begin VB.TextBox txt_CNPJ_Emitente 
-         Height          =   285
-         Left            =   960
+         BackColor       =   &H00FBF7EE&
+         Height          =   315
+         Left            =   930
          TabIndex        =   11
-         Top             =   480
-         Width           =   1815
+         Text            =   "10775496000129"
+         Top             =   450
+         Width           =   1425
       End
       Begin VB.TextBox txt_ServSmtp_Remetente 
-         Height          =   285
-         Left            =   2880
+         BackColor       =   &H00FBF7EE&
+         Height          =   315
+         Left            =   2370
          TabIndex        =   10
-         Top             =   480
-         Width           =   3015
+         Top             =   450
+         Width           =   3825
       End
       Begin VB.TextBox txt_Email_Remetente 
-         Height          =   285
-         Left            =   120
+         BackColor       =   &H00FBF7EE&
+         Height          =   315
+         Left            =   6210
          TabIndex        =   9
-         Top             =   1080
-         Width           =   2175
+         Top             =   450
+         Width           =   4095
       End
       Begin VB.TextBox txt_Usuario_Email_Remetente 
-         Height          =   285
-         Left            =   2400
+         BackColor       =   &H00FBF7EE&
+         Height          =   315
+         Left            =   10320
          TabIndex        =   8
-         Top             =   1080
-         Width           =   2295
+         Top             =   450
+         Width           =   2115
       End
       Begin VB.TextBox txt_Senha_Email_Remetente 
-         Height          =   285
+         BackColor       =   &H00FBF7EE&
+         Height          =   315
          IMEMode         =   3  'DISABLE
-         Left            =   4800
+         Left            =   12450
          PasswordChar    =   "*"
          TabIndex        =   7
-         Top             =   1080
+         Top             =   450
          Width           =   1095
       End
       Begin VB.Label Label7 
          AutoSize        =   -1  'True
          Caption         =   "CNPJ"
          Height          =   195
-         Left            =   960
+         Left            =   930
          TabIndex        =   17
-         Top             =   285
+         Top             =   255
          Width           =   405
       End
       Begin VB.Label Label3 
@@ -478,43 +549,43 @@ Begin VB.Form Form_Emissor_NFe
          Height          =   195
          Left            =   165
          TabIndex        =   16
-         Top             =   285
+         Top             =   255
          Width           =   495
       End
       Begin VB.Label Label14 
          AutoSize        =   -1  'True
          Caption         =   "Servidor (smtp) E-Mail"
          Height          =   195
-         Left            =   2880
+         Left            =   2370
          TabIndex        =   15
-         Top             =   285
+         Top             =   255
          Width           =   1530
       End
       Begin VB.Label Label15 
          AutoSize        =   -1  'True
          Caption         =   "E-mail Remetente"
          Height          =   195
-         Left            =   120
+         Left            =   6210
          TabIndex        =   14
-         Top             =   885
+         Top             =   255
          Width           =   1245
       End
       Begin VB.Label Label16 
          AutoSize        =   -1  'True
          Caption         =   "Usuário"
          Height          =   195
-         Left            =   2400
+         Left            =   10290
          TabIndex        =   13
-         Top             =   885
+         Top             =   255
          Width           =   540
       End
       Begin VB.Label Label17 
          AutoSize        =   -1  'True
          Caption         =   "Senha"
          Height          =   195
-         Left            =   4800
+         Left            =   12450
          TabIndex        =   12
-         Top             =   885
+         Top             =   255
          Width           =   465
       End
    End
