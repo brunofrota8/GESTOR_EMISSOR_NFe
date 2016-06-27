@@ -18,3 +18,17 @@ Falha da análise do elemento '{http://www.portalfiscal.inf.br/nfe}nRec' com valo
 Falha da análise do elemento '{http://www.portalfiscal.inf.br/nfe}nRec' com valor 'onsSitNFe versa'
 [08/06/2016 16:39:55:204] 3772 - EspdNFeException : Erro ao consultar recibo: A conexão com o servidor foi reconfigurada - URL:https://homologacao.nfe.fazenda.sp.gov.br/ws/nferetautorizacao.asmx - SOAPAction:http://www.portalfiscal.inf.br/nfe/wsdl/NfeRetAutorizacao/NfeRetAutorizacaoLote
 [08/06/2016 16:47:03:985] 3772 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[15/06/2016 13:38:38:911] 2996 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[15/06/2016 13:42:51:159] 2996 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[15/06/2016 13:59:28:509] 3152 - EspdCertStoreException : Não foi possível carregar o certificado "CN=ELASTOTEC INDUSTRIA E COMERCIO DE ARTEFATOS DE BO:54988308000116, OU=AR FACESP, O=ICP-Brasil, C=BR, S=SP, L=SOROCABA, E=
+" devido ao seguinte problema: "Certificado não encontrado."
+[15/06/2016 13:59:28:525] 3152 - EspdNFeConfigException : Erro ao carregar configurações: Não foi possível carregar o certificado "CN=ELASTOTEC INDUSTRIA E COMERCIO DE ARTEFATOS DE BO:54988308000116, OU=AR FACESP, O=ICP-Brasil, C=BR, S=SP, L=SOROCABA, E=
+" devido ao seguinte problema: "Certificado não encontrado."
+[15/06/2016 14:31:12:154] 984 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[15/06/2016 15:57:11:852] 3500 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[15/06/2016 16:00:21:150] 628 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[15/06/2016 16:06:37:433] 628 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[27/06/2016 11:49:35:429] 3520 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[27/06/2016 11:56:21:754] 3520 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[27/06/2016 12:07:33:775] 3520 - EspdNFeException : Erro ao enviar NF-e: A conexão com o servidor foi reconfigurada - URL:https://homologacao.nfe.fazenda.sp.gov.br/ws/nfeautorizacao.asmx - SOAPAction:http://www.portalfiscal.inf.br/nfe/wsdl/NfeAutorizacao/NfeAutorizacaoLote
+[27/06/2016 12:43:04:294] 3688 - EspdNFeException : Erro ao consultar status do serviço: A conexão com o servidor foi reconfigurada - URL:https://nfe.fazenda.sp.gov.br/ws/nfestatusservico2.asmx - SOAPAction:http://www.portalfiscal.inf.br/nfe/wsdl/NfeStatusServico3/nfeStatusServicoNF

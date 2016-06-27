@@ -15,7 +15,7 @@ Begin VB.Form Form_Emissor_NFe
    MinButton       =   0   'False
    ScaleHeight     =   8520
    ScaleWidth      =   13815
-   StartUpPosition =   3  'Windows Default
+   StartUpPosition =   2  'CenterScreen
    Begin MSComDlg.CommonDialog Common_ShowOpen_XML 
       Left            =   12675
       Top             =   8040
@@ -109,7 +109,6 @@ Begin VB.Form Form_Emissor_NFe
          Height          =   360
          Left            =   6390
          TabIndex        =   37
-         Text            =   "123456789012345678901234567890123456789012345"
          Top             =   300
          Width           =   5550
       End
@@ -254,10 +253,10 @@ Begin VB.Form Form_Emissor_NFe
       Begin VB.CommandButton cmd_Enviar_Email 
          Caption         =   "ENVIAR EMAIL"
          Height          =   375
-         Left            =   2355
+         Left            =   2340
          Style           =   1  'Graphical
          TabIndex        =   49
-         Top             =   660
+         Top             =   675
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Imprimir_NFe 
@@ -608,19 +607,20 @@ Public spd_Text_Chave As String
 Public spd_Text_Protocolo As String
 Public spd_Text_Jus_Cancelamento As String
 
-Dim arquivo As String
-Dim fso As New FileSystemObject
+Dim Arquivo As String
+Dim FSO As New FileSystemObject
 Dim Arq_txt As TextStream
-Dim texto As String
+Dim Texto As String
 
 Dim Nota As String
 
 Dim Caminho As String
 Dim Caminho_Envio As String
 Dim Caminho_Recibo As String
-Dim Arq_Xml As TextStream
-
+Dim Caminho_RTM As String
 Public Caminho_XML_Autorizado As String
+
+Dim Arq_Xml As TextStream
 
 Dim Inicio_Texto As Integer
 Dim Fim_Texto As Integer
@@ -630,19 +630,28 @@ Dim CaminhoRecibo As String
 Dim CaminhoEnvio As String
 
 
-
-
 Private Sub cmd_Alterar_Modelo_Danfe_Click()
 
+'Pegando Arquivo XML Autorizado. Precisamos dele para Referencia
+'---------------------------------------------------------------------------------------
 Common_ShowOpen_XML.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
 Common_ShowOpen_XML.FileName = App.Path
 Common_ShowOpen_XML.ShowOpen
 
-arquivo = Common_ShowOpen_XML.FileName                                            'Carrega o arquivo gerado na pasta XML Destinatario que possui Numero de Protocolo e Numero de Autorização
+Caminho_XML_Autorizado = Common_ShowOpen_XML.FileName
                                                                                                                                    
-Set Arq_txt = fso.OpenTextFile(arquivo)
-texto = Arq_txt.ReadAll
-memoRetorno.Text = spd_NFe.EditarModeloDanfe("0001", texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50\Danfe\retrato.rtm")
+Set Arq_txt = FSO.OpenTextFile(Caminho_XML_Autorizado)
+Texto = Arq_txt.ReadAll
+
+'Pegando Arquivo RTM que será Editado
+'---------------------------------------------------------------------------------------
+Common_ShowOpen_XML.Filter = "Arquivo RTM (*.rtm)|*.rtm"
+Common_ShowOpen_XML.FileName = spd_NFe.ModeloRetrato
+Common_ShowOpen_XML.ShowOpen
+
+Caminho_RTM = Common_ShowOpen_XML.FileName
+
+memoRetorno.Text = spd_NFe.EditarModeloDanfe("0001", Texto, Caminho_RTM)
 
 End Sub
 
@@ -811,7 +820,7 @@ Caminho_Recibo = spd_NFe.UltimoLogConsRecibo
 Caminho = App.Path & "\XML_RECIBO\" & spd_Text_Chave & "_Recibo_.xml"
 
 'Copiando Arquivo .XML (Se ele já existir, substitui)
-fso.CopyFile Caminho_Recibo, Caminho, True
+FSO.CopyFile Caminho_Recibo, Caminho, True
 
 '======================================================================================================================
 
@@ -870,12 +879,16 @@ Dim LogEnv As String
 Dim LogConsRec As String
   
 ''Captura as configurações que estão nos TextBox e Seta para o Componente - Isso pode ser Feito Direto na Inicialização
-'spd_NFe.EmailRemetente = spd_NFe.EmailRemetente
-'spd_NFe.EmailServidor = spd_NFe.EmailServidor
-'spd_NFe.EmailUsuario = spd_NFe.EmailUsuario
-'spd_NFe.EmailSenha = spd_NFe.EmailSenha
-'spd_NFe.ArquivoServidoresHom = spd_NFe.ArquivoServidoresHom
-'spd_NFe.ArquivoServidoresProd = spd_NFe.ArquivoServidoresProd
+
+spd_NFe.EmailAutenticacao = True
+spd_NFe.EmailRemetente = spd_NFe.EmailRemetente
+spd_NFe.EmailServidor = spd_NFe.EmailServidor
+spd_NFe.EmailUsuario = spd_NFe.EmailUsuario
+spd_NFe.EmailSenha = spd_NFe.EmailSenha
+spd_NFe.EmailPorta = "465"
+
+spd_NFe.ArquivoServidoresHom = spd_NFe.ArquivoServidoresHom
+spd_NFe.ArquivoServidoresProd = spd_NFe.ArquivoServidoresProd
   
 'Dados para Envio do Emial para o Destinatario
 spd_NFe.EmailDestinatario = InputBox("Digite o Email do Destinatário", App.Title, "")
@@ -891,8 +904,16 @@ CaminhoRecibo = App.Path & "\XML_RECIBO\" & spd_Text_Chave & "_Recibo_.xml"
 'ChaveNFe = InputBox("Chave de Acesso da NFE", App.Title, "")
 'LogEnv = InputBox("Arquivo LOG de Envio", App.Title, "")
 'LogConsRec = InputBox("Arquivo LOG de Consulta de Recibo", App.Title, "")
-  
+
+
+cmd_Enviar_Email.Enabled = False
+DoEvents
+
 memoRetorno.Text = spd_NFe.EnviarNotaDestinatario(spd_Text_Chave, CaminhoEnvio, CaminhoRecibo)
+
+MsgBox "Email Enviado com Exito", vbInformation, " "
+
+cmd_Enviar_Email.Enabled = True
 
 End Sub
 
@@ -934,7 +955,7 @@ Caminho_Recibo = spd_NFe.UltimoLogRecibo
 
 Caminho = App.Path & "\XML_ASSINADO\" & spd_Text_Chave & "_Assinado_.xml"
 'Copiando Arquivo .XML (Se ele já existir, substitui)
-fso.CopyFile Caminho_Envio, Caminho, True
+FSO.CopyFile Caminho_Envio, Caminho, True
 
 Caminho = App.Path & "\XML_RECIBO\" & spd_Text_Chave & "_Recibo_.xml"
 'Copiando Arquivo .XML (Se ele já existir, substitui)
@@ -978,11 +999,11 @@ Common_ShowOpen_XML.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
 Common_ShowOpen_XML.FileName = App.Path
 Common_ShowOpen_XML.ShowOpen
 
-arquivo = Common_ShowOpen_XML.FileName                                            'Carrega o arquivo gerado na pasta XML Destinatario que possui Numero de Protocolo e Numero de Autorização
+Arquivo = Common_ShowOpen_XML.FileName                                            'Carrega o arquivo gerado na pasta XML Destinatario que possui Numero de Protocolo e Numero de Autorização
                                                                            
-Set Arq_txt = fso.OpenTextFile(arquivo)
-texto = Arq_txt.ReadAll
-memoRetorno.Text = spd_NFe.ImprimirDanfe("0000001", texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50a\Danfe\retrato.rtm", "")
+Set Arq_txt = FSO.OpenTextFile(Arquivo)
+Texto = Arq_txt.ReadAll
+memoRetorno.Text = spd_NFe.ImprimirDanfe("0000001", Texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50a\Danfe\retrato.rtm", "")
 
 End Sub
 
@@ -997,7 +1018,15 @@ End Sub
 
 
 Private Sub cmd_Tudo_Click()
+
+cmd_Tudo.Enabled = False
+DoEvents
+
 ENVIAR_NFe_PARA_SEFAZ_COMBO_FUNCOES
+
+DoEvents
+cmd_Tudo.Enabled = True
+
 End Sub
 
 
@@ -1007,11 +1036,11 @@ Common_ShowOpen_XML.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
 Common_ShowOpen_XML.FileName = App.Path & "\XML_AUTORIZADO"
 Common_ShowOpen_XML.ShowOpen
 
-arquivo = Common_ShowOpen_XML.FileName                                            'Carrega o arquivo gerado na pasta XML Destinatario que possui Numero de Protocolo e Numero de Autorização
+Arquivo = Common_ShowOpen_XML.FileName                                            'Carrega o arquivo gerado na pasta XML Destinatario que possui Numero de Protocolo e Numero de Autorização
                                                                            
-Set Arq_txt = fso.OpenTextFile(arquivo)
-texto = Arq_txt.ReadAll
-memoRetorno.Text = spd_NFe.VisualizarDanfe("0000001", texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50\Danfe\retrato.rtm")
+Set Arq_txt = FSO.OpenTextFile(Arquivo)
+Texto = Arq_txt.ReadAll
+memoRetorno.Text = spd_NFe.VisualizarDanfe("0000001", Texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50\Danfe\retrato.rtm")
 
 End Sub
 
@@ -1125,9 +1154,9 @@ cmd_Baixar_XML_Autorizado_Click
 
 MsgBox "FIM", vbInformation, " "
                                                                            
-Set Arq_txt = fso.OpenTextFile(Caminho_XML_Autorizado)
-texto = Arq_txt.ReadAll
-memoRetorno.Text = spd_NFe.VisualizarDanfe("0000001", texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50\Danfe\retrato.rtm")
+Set Arq_txt = FSO.OpenTextFile(Caminho_XML_Autorizado)
+Texto = Arq_txt.ReadAll
+memoRetorno.Text = spd_NFe.VisualizarDanfe("0000001", Texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50\Danfe\retrato.rtm")
 
 End Sub
 
