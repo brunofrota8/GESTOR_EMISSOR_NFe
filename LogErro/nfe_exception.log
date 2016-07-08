@@ -32,3 +32,19 @@ Falha da análise do elemento '{http://www.portalfiscal.inf.br/nfe}nRec' com valo
 [27/06/2016 11:56:21:754] 3520 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
 [27/06/2016 12:07:33:775] 3520 - EspdNFeException : Erro ao enviar NF-e: A conexão com o servidor foi reconfigurada - URL:https://homologacao.nfe.fazenda.sp.gov.br/ws/nfeautorizacao.asmx - SOAPAction:http://www.portalfiscal.inf.br/nfe/wsdl/NfeAutorizacao/NfeAutorizacaoLote
 [27/06/2016 12:43:04:294] 3688 - EspdNFeException : Erro ao consultar status do serviço: A conexão com o servidor foi reconfigurada - URL:https://nfe.fazenda.sp.gov.br/ws/nfestatusservico2.asmx - SOAPAction:http://www.portalfiscal.inf.br/nfe/wsdl/NfeStatusServico3/nfeStatusServicoNF
+[08/07/2016 11:36:26:504] 2732 - EspdNFeCheckParams : Número do Recibo deve ter exatamente 15 dígitos: 35160754988308000116550010000392691001092668
+[08/07/2016 11:37:49:660] 2732 - EspdNFeCheckParams : Número do Recibo deve ter exatamente 15 dígitos: 35160754988308000116550010000392691001092668
+[08/07/2016 11:39:05:379] 2732 - EspdNFeCheckParams : Número do Recibo deve ter exatamente 15 dígitos: 35160754988308000116550010000392691001092668
+[08/07/2016 11:39:09:973] 2732 - EspdNFeCheckParams : Número do Recibo deve ter exatamente 15 dígitos: 35160754988308000116550010000392691001092668
+[08/07/2016 11:42:16:645] 2732 - EspdSchemaValidationException : O arquivo contém 1 ou mais erros no de validação de esquema '3.10' viola a restrição pattern de '2\.00'.
+Falha da análise do atributo 'versao' com valor '3.10'
+[08/07/2016 11:43:58:207] 2732 - EspdSchemaValidationException : O arquivo contém 1 ou mais erros no de validação de esquema '3.10' viola a restrição pattern de '2\.00'.
+Falha da análise do atributo 'versao' com valor '3.10'
+[08/07/2016 11:53:00:504] 2732 - EspdSchemaValidationException : O arquivo contém 1 ou mais erros no de validação de esquema '3.10' viola a restrição pattern de '2\.00'.
+Falha da análise do atributo 'versao' com valor '3.10'
+[08/07/2016 11:54:24:285] 2732 - EspdSchemaValidationException : O arquivo contém 1 ou mais erros no de validação de esquema '3.10' viola a restrição pattern de '2\.00'.
+Falha da análise do atributo 'versao' com valor '3.10'
+[08/07/2016 11:55:24:989] 2732 - EspdSchemaValidationException : O arquivo contém 1 ou mais erros no de validação de esquema '3.10' viola a restrição pattern de '2\.00'.
+Falha da análise do atributo 'versao' com valor '3.10'
+[08/07/2016 11:57:43:739] 2732 - EspdSchemaValidationException : O arquivo contém 1 ou mais erros no de validação de esquema '3.10' viola a restrição pattern de '2\.00'.
+Falha da análise do atributo 'versao' com valor '3.10'

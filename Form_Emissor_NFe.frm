@@ -201,10 +201,20 @@ Begin VB.Form Form_Emissor_NFe
          Strikethrough   =   0   'False
       EndProperty
       Height          =   1560
-      Left            =   60
+      Left            =   45
       TabIndex        =   32
-      Top             =   3990
+      Top             =   4005
       Width           =   13695
+      Begin VB.CommandButton cmd_Inutilizar 
+         Caption         =   "INUTILIZAR NF-e"
+         Enabled         =   0   'False
+         Height          =   375
+         Left            =   90
+         Style           =   1  'Graphical
+         TabIndex        =   50
+         Top             =   1080
+         Width           =   2220
+      End
       Begin VB.CommandButton cmd_Alterar_Modelo_Danfe 
          Caption         =   "ALTERAR MODELO DANFE"
          Height          =   375
@@ -229,7 +239,7 @@ Begin VB.Form Form_Emissor_NFe
          Left            =   9150
          Style           =   1  'Graphical
          TabIndex        =   33
-         Top             =   660
+         Top             =   675
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Tudo 
@@ -244,7 +254,7 @@ Begin VB.Form Form_Emissor_NFe
       Begin VB.CommandButton cmd_Consultar_NFe 
          Caption         =   "CONSULTAR NF-e"
          Height          =   375
-         Left            =   4620
+         Left            =   4590
          Style           =   1  'Graphical
          TabIndex        =   35
          Top             =   660
@@ -298,10 +308,10 @@ Begin VB.Form Form_Emissor_NFe
       Begin VB.CommandButton cmd_Enviar_XML 
          Caption         =   "ENVIAR XML"
          Height          =   375
-         Left            =   4620
+         Left            =   4590
          Style           =   1  'Graphical
          TabIndex        =   3
-         Top             =   240
+         Top             =   270
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Assinar_XML 
@@ -310,7 +320,7 @@ Begin VB.Form Form_Emissor_NFe
          Left            =   2355
          Style           =   1  'Graphical
          TabIndex        =   2
-         Top             =   240
+         Top             =   225
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Gerar_XML 
@@ -632,6 +642,8 @@ Dim CaminhoEnvio As String
 
 Private Sub cmd_Alterar_Modelo_Danfe_Click()
 
+On Error GoTo Erro
+
 'Pegando Arquivo XML Autorizado. Precisamos dele para Referencia
 '---------------------------------------------------------------------------------------
 Common_ShowOpen_XML.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
@@ -653,10 +665,18 @@ Caminho_RTM = Common_ShowOpen_XML.FileName
 
 memoRetorno.Text = spd_NFe.EditarModeloDanfe("0001", Texto, Caminho_RTM)
 
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+End If
+
 End Sub
 
 
 Private Sub cmd_Assinar_XML_Click()
+
+On Error GoTo Erro
 
 cmd_Assinar_XML.Enabled = False
 DoEvents
@@ -675,13 +695,21 @@ End If
 spd_Text_Chave = Mid$(spd_Text_Retorno_XML_Assinado, InStrRev(spd_Text_Retorno_XML_Assinado, "<infNFe Id=") + 15, 44)
 txt_IDNFe.Text = spd_Text_Chave
 
-DoEvents
 cmd_Assinar_XML.Enabled = True
+
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+    cmd_Assinar_XML.Enabled = True
+End If
 
 End Sub
 
 
 Private Sub cmd_Baixar_XML_Autorizado_Click()
+
+On Error GoTo Erro
 
 spd_Text_Retorno_XML_Retornado = ""
 
@@ -714,10 +742,18 @@ MsgBox "Download de Arquivo Xml Completo!", vbInformation, " "
 
 'Depois é só salvar o xmlGerado no seu banco, pois essa função retorna o conteúdo do xml autorizado
 
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+End If
+
 End Sub
 
 
 Private Sub cmd_Cancelar_NFe_Click()
+  
+On Error GoTo Erro
   
 Dim NotaXML As String
 
@@ -738,22 +774,30 @@ Do While Len(spd_Text_Jus_Cancelamento) < 15
 Loop
   
 cmd_Cancelar_NFe.Enabled = False
-DoEvents
   
 vRESP = MsgBox("Confirma o CANCELAMENTO dessa NF-e?", vbQuestion + vbYesNo + vbDefaultButton2, "Cancelando NF-e...")
 If vRESP = vbYes Then
 
-'Dispara Método que solicita Cancelamento da NFe e aguarda retorno.
-memoRetorno.Text = spd_NFe.CancelarNF(txt_IDNFe.Text, txt_Protocolo.Text, spd_Text_Jus_Cancelamento)
+    'Dispara Método que solicita Cancelamento da NFe e aguarda retorno.
+    memoRetorno.Text = spd_NFe.CancelarNF(txt_IDNFe.Text, txt_Protocolo.Text, spd_Text_Jus_Cancelamento)
 
 End If
 
 cmd_Cancelar_NFe.Enabled = True
 
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+    cmd_Cancelar_NFe.Enabled = True
+End If
+
 End Sub
 
 
 Private Sub cmd_Consultar_NFe_Click()
+
+On Error GoTo Erro
 
 cmd_Consultar_NFe.Enabled = False
 DoEvents
@@ -767,16 +811,23 @@ memoRetorno.Text = spd_NFe.ConsultarNF(spd_Text_Chave)
 
 MsgBox Mid$(memoRetorno.Text, InStrRev(memoRetorno.Text, "<xMotivo>") + 9, 24), vbInformation, " "
 
-DoEvents
 cmd_Consultar_NFe.Enabled = True
+
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+    cmd_Consultar_NFe.Enabled = True
+End If
 
 End Sub
 
 
 Private Sub cmd_Consultar_Recibo_Click()
 
+On Error GoTo Erro
+
 cmd_Consultar_Recibo.Enabled = False
-DoEvents
 
 '======================================================================================================================
 
@@ -828,13 +879,21 @@ MsgBox Mid$(spd_Text_Recibo_Retorno, Inicio_Texto + 9, Cont_Texto), vbInformatio
 
 cmd_Consultar_Recibo.Enabled = True
 
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+    cmd_Consultar_Recibo.Enabled = True
+End If
+
 End Sub
 
 
 Private Sub cmd_Consultar_Situacao_Click()
 
+On Error GoTo Erro
+
 cmd_Consultar_Situacao.Enabled = False
-DoEvents
 
 spd_Text_Retorno = ""
 spd_Text_Retorno = spd_NFe.StatusDoServico  'Método que retorna o status do servidor da Receita
@@ -842,13 +901,21 @@ memoRetorno.Text = spd_Text_Retorno
 
 MsgBox Mid$(spd_Text_Retorno, InStrRev(spd_Text_Retorno, "<xMotivo>") + 9, 19), vbInformation, " "
 
-DoEvents
 cmd_Consultar_Situacao.Enabled = True
+
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+    cmd_Consultar_Situacao.Enabled = True
+End If
 
 End Sub
 
 
 Private Sub cmd_Enviar_Email_Click()
+
+On Error GoTo Erro
 
 ''''========================================================================================================================================
 ''''Seta Configurações de Email para a Componente NFe
@@ -907,7 +974,6 @@ CaminhoRecibo = App.Path & "\XML_RECIBO\" & spd_Text_Chave & "_Recibo_.xml"
 
 
 cmd_Enviar_Email.Enabled = False
-DoEvents
 
 memoRetorno.Text = spd_NFe.EnviarNotaDestinatario(spd_Text_Chave, CaminhoEnvio, CaminhoRecibo)
 
@@ -915,10 +981,19 @@ MsgBox "Email Enviado com Exito", vbInformation, " "
 
 cmd_Enviar_Email.Enabled = True
 
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+    cmd_Enviar_Email.Enabled = True
+End If
+
 End Sub
 
 
 Private Sub cmd_Enviar_XML_Click()
+
+On Error GoTo Erro
 
 cmd_Enviar_XML.Enabled = False
 DoEvents
@@ -963,13 +1038,21 @@ Caminho = App.Path & "\XML_RECIBO\" & spd_Text_Chave & "_Recibo_.xml"
 
 '======================================================================================================================
 
-DoEvents
 cmd_Enviar_XML.Enabled = True
+
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+    cmd_Enviar_XML.Enabled = True
+End If
 
 End Sub
 
 
 Private Sub cmd_Gerar_XML_Click()
+
+On Error GoTo Erro
 
 spd_Text_Retorno_XML = ""
 
@@ -990,10 +1073,19 @@ If Common_ShowOpen.FileName <> "" Then
 
 End If
 
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+    Close #1
+End If
+
 End Sub
 
 
 Private Sub cmd_Imprimir_NFe_Click()
+
+On Error GoTo Erro
 
 Common_ShowOpen_XML.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
 Common_ShowOpen_XML.FileName = App.Path
@@ -1004,6 +1096,12 @@ Arquivo = Common_ShowOpen_XML.FileName                                          
 Set Arq_txt = FSO.OpenTextFile(Arquivo)
 Texto = Arq_txt.ReadAll
 memoRetorno.Text = spd_NFe.ImprimirDanfe("0000001", Texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50a\Danfe\retrato.rtm", "")
+
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+End If
 
 End Sub
 
@@ -1020,17 +1118,17 @@ End Sub
 Private Sub cmd_Tudo_Click()
 
 cmd_Tudo.Enabled = False
-DoEvents
 
 ENVIAR_NFe_PARA_SEFAZ_COMBO_FUNCOES
 
-DoEvents
 cmd_Tudo.Enabled = True
 
 End Sub
 
 
 Private Sub cmd_Visualizar_NFe_Click()
+
+On Error GoTo Erro
 
 Common_ShowOpen_XML.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
 Common_ShowOpen_XML.FileName = App.Path & "\XML_AUTORIZADO"
@@ -1041,6 +1139,12 @@ Arquivo = Common_ShowOpen_XML.FileName                                          
 Set Arq_txt = FSO.OpenTextFile(Arquivo)
 Texto = Arq_txt.ReadAll
 memoRetorno.Text = spd_NFe.VisualizarDanfe("0000001", Texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50\Danfe\retrato.rtm")
+
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+End If
 
 End Sub
 
@@ -1134,6 +1238,8 @@ End Sub
 
 Sub ENVIAR_NFe_PARA_SEFAZ_COMBO_FUNCOES()
 
+On Error GoTo Erro
+
 cmd_Gerar_XML_Click
 
 MsgBox "XML Gerado com Exito", vbInformation, " "
@@ -1157,6 +1263,12 @@ MsgBox "FIM", vbInformation, " "
 Set Arq_txt = FSO.OpenTextFile(Caminho_XML_Autorizado)
 Texto = Arq_txt.ReadAll
 memoRetorno.Text = spd_NFe.VisualizarDanfe("0000001", Texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50\Danfe\retrato.rtm")
+
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+End If
 
 End Sub
 
