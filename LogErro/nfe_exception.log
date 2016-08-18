@@ -48,3 +48,23 @@ Falha da análise do atributo 'versao' com valor '3.10'
 Falha da análise do atributo 'versao' com valor '3.10'
 [08/07/2016 11:57:43:739] 2732 - EspdSchemaValidationException : O arquivo contém 1 ou mais erros no de validação de esquema '3.10' viola a restrição pattern de '2\.00'.
 Falha da análise do atributo 'versao' com valor '3.10'
+[11/07/2016 14:15:35:123] 3492 - EspdNFeException : Erro ao enviar NF-e: A conexão com o servidor foi reconfigurada - URL:https://homologacao.nfe.fazenda.sp.gov.br/ws/nfeautorizacao.asmx - SOAPAction:http://www.portalfiscal.inf.br/nfe/wsdl/NfeAutorizacao/NfeAutorizacaoLote
+[11/07/2016 14:25:33:248] 3492 - EspdNFeException : Erro ao enviar NF-e: Uma conexão com o servidor não pôde ser estabelecida - URL:https://homologacao.nfe.fazenda.sp.gov.br/ws/nfeautorizacao.asmx - SOAPAction:http://www.portalfiscal.inf.br/nfe/wsdl/NfeAutorizacao/NfeAutorizacaoLote
+[08/08/2016 12:05:04:613] 1760 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[08/08/2016 14:55:25:424] 1760 - EspdNFeException : Erro ao consultar recibo: A conexão com o servidor foi reconfigurada - URL:https://homologacao.nfe.fazenda.sp.gov.br/ws/nferetautorizacao.asmx - SOAPAction:http://www.portalfiscal.inf.br/nfe/wsdl/NfeRetAutorizacao/NfeRetAutorizacaoLote
+[08/08/2016 14:56:51:580] 1760 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[08/08/2016 15:26:08:627] 1760 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[08/08/2016 15:27:08:196] 1760 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[08/08/2016 15:33:37:696] 1760 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[16/08/2016 12:22:50:981] 352 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[16/08/2016 15:06:26:800] 3656 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[16/08/2016 15:08:30:972] 3656 - EspdNFeEnviarNotaDestinatarioException : Erro ao enviar e-mail ao destinatário
+[17/08/2016 10:52:50:711] 500 - EspdSchemaValidationException : O arquivo contém 1 ou mais erros no de validação de esquema 'End Correto: Rua La Longe, Esquina com Seila ' viola a restrição pattern de '[!-ÿ]{1}[ -ÿ]{0,}[!-ÿ]{1}|[!-ÿ]{1}'.
+Falha da análise do elemento '{http://www.portalfiscal.inf.br/nfe}xCorrecao' com valor 'End Correto: Rua La Longe, Esquina com Seila '
+[17/08/2016 10:52:50:743] 500 - EspdNFeException : Erro ao enviar CCe: O arquivo contém 1 ou mais erros no de validação de esquema 'End Correto: Rua La Longe, Esquina com Seila ' viola a restrição pattern de '[!-ÿ]{1}[ -ÿ]{0,}[!-ÿ]{1}|[!-ÿ]{1}'.
+Falha da análise do elemento '{http://www.portalfiscal.inf.br/nfe}xCorrecao' com valor 'End Correto: Rua La Longe, Esquina com Seila '
+[17/08/2016 10:56:23:961] 500 - EspdSchemaValidationException : O arquivo contém 1 ou mais erros no de validação de esquema 'End Correto: Rua La Longe, Esquina com Seila ' viola a restrição pattern de '[!-ÿ]{1}[ -ÿ]{0,}[!-ÿ]{1}|[!-ÿ]{1}'.
+Falha da análise do elemento '{http://www.portalfiscal.inf.br/nfe}xCorrecao' com valor 'End Correto: Rua La Longe, Esquina com Seila '
+[17/08/2016 10:56:23:961] 500 - EspdNFeException : Erro ao enviar CCe: O arquivo contém 1 ou mais erros no de validação de esquema 'End Correto: Rua La Longe, Esquina com Seila ' viola a restrição pattern de '[!-ÿ]{1}[ -ÿ]{0,}[!-ÿ]{1}|[!-ÿ]{1}'.
+Falha da análise do elemento '{http://www.portalfiscal.inf.br/nfe}xCorrecao' com valor 'End Correto: Rua La Longe, Esquina com Seila '
+[17/08/2016 10:58:14:571] 500 - EspdNFeException : Erro ao consultar NF-e: A conexão com o servidor foi reconfigurada - URL:https://homologacao.nfe.fazenda.sp.gov.br/ws/nfeconsulta2.asmx - SOAPAction:http://www.portalfiscal.inf.br/nfe/wsdl/NfeConsulta3/nfeConsultaNF

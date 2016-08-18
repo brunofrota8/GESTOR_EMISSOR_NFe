@@ -9,21 +9,29 @@ Public spd_ArqIni As String
 
 Public Sub Load_Combo_CertificadosInstalados(COMBO As ComboBox)
 
-On Error Resume Next
+On Error GoTo Erro
 
 'Instancia o Objeto responsável pela interação com servidores da Receita'
 Set spd_NFe = New NFeX.spdNFeX
      
-Dim i As Integer
-Dim vetor As Variant
+Dim I As Integer
+Dim Vetor As Variant
 
 'Utiliza Método do Componente para Listar Certificados instalado no SO
-vetor = Split(spd_NFe.ListarCertificados("|"), "|")
+Vetor = Split(spd_NFe.ListarCertificados("|"), "|")
 COMBO.Clear
 
-For i = LBound(vetor) To UBound(vetor)
-    COMBO.AddItem vetor(i)
+For I = LBound(Vetor) To UBound(Vetor)
+    COMBO.AddItem Vetor(I)
 Next
+
+Exit Sub
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+    Close #1
+End If
 
 End Sub
 

@@ -1,5 +1,4 @@
 VERSION 5.00
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "ComDlg32.OCX"
 Begin VB.Form Form_Emissor_NFe 
    BackColor       =   &H00C0C0C0&
    BorderStyle     =   1  'Fixed Single
@@ -12,24 +11,9 @@ Begin VB.Form Form_Emissor_NFe
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
-   MinButton       =   0   'False
    ScaleHeight     =   8520
    ScaleWidth      =   13815
    StartUpPosition =   2  'CenterScreen
-   Begin MSComDlg.CommonDialog Common_ShowOpen_XML 
-      Left            =   12675
-      Top             =   8040
-      _ExtentX        =   847
-      _ExtentY        =   847
-      _Version        =   393216
-   End
-   Begin MSComDlg.CommonDialog Common_ShowSave 
-      Left            =   12090
-      Top             =   8040
-      _ExtentX        =   847
-      _ExtentY        =   847
-      _Version        =   393216
-   End
    Begin VB.Frame Frame5 
       BackColor       =   &H00C0C0C0&
       Height          =   735
@@ -51,7 +35,7 @@ Begin VB.Form Form_Emissor_NFe
          ForeColor       =   &H80000002&
          Height          =   315
          ItemData        =   "Form_Emissor_NFe.frx":08CA
-         Left            =   12300
+         Left            =   240
          List            =   "Form_Emissor_NFe.frx":08D7
          TabIndex        =   43
          Top             =   360
@@ -127,7 +111,7 @@ Begin VB.Form Form_Emissor_NFe
          EndProperty
          ForeColor       =   &H80000002&
          Height          =   210
-         Left            =   12060
+         Left            =   0
          TabIndex        =   44
          Top             =   120
          Visible         =   0   'False
@@ -164,17 +148,10 @@ Begin VB.Form Form_Emissor_NFe
          Width           =   735
       End
    End
-   Begin MSComDlg.CommonDialog Common_ShowOpen 
-      Left            =   11505
-      Top             =   8040
-      _ExtentX        =   847
-      _ExtentY        =   847
-      _Version        =   393216
-   End
    Begin VB.TextBox memoRetorno 
       BeginProperty Font 
-         Name            =   "Verdana"
-         Size            =   8.25
+         Name            =   "Courier New"
+         Size            =   9
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -205,14 +182,41 @@ Begin VB.Form Form_Emissor_NFe
       TabIndex        =   32
       Top             =   4005
       Width           =   13695
-      Begin VB.CommandButton cmd_Inutilizar 
-         Caption         =   "INUTILIZAR NF-e"
-         Enabled         =   0   'False
+      Begin VB.CommandButton cmd_Cancelar_NFe 
+         Caption         =   "<<  CANCELAR NF-e  >>"
+         Height          =   375
+         Left            =   11430
+         Style           =   1  'Graphical
+         TabIndex        =   47
+         Top             =   1080
+         Width           =   2220
+      End
+      Begin VB.CommandButton cmd_CCorrecao 
+         Caption         =   "<< CARTA CORREÇÃO >>"
+         Height          =   375
+         Left            =   2340
+         Style           =   1  'Graphical
+         TabIndex        =   51
+         Top             =   1080
+         Width           =   2220
+      End
+      Begin VB.CommandButton cmd_Enviar_WS_Sefaz 
+         Caption         =   "<<  ENVIAR NF-e  >>"
          Height          =   375
          Left            =   90
          Style           =   1  'Graphical
          TabIndex        =   50
          Top             =   1080
+         Width           =   2220
+      End
+      Begin VB.CommandButton cmd_Inutilizar 
+         Caption         =   "INUTILIZAR NF-e"
+         Enabled         =   0   'False
+         Height          =   375
+         Left            =   6885
+         Style           =   1  'Graphical
+         TabIndex        =   49
+         Top             =   660
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Alterar_Modelo_Danfe 
@@ -221,15 +225,6 @@ Begin VB.Form Form_Emissor_NFe
          Left            =   11415
          Style           =   1  'Graphical
          TabIndex        =   46
-         Top             =   1080
-         Width           =   2220
-      End
-      Begin VB.CommandButton cmd_Cancelar_NFe 
-         Caption         =   "CANCELAR NF-e"
-         Height          =   375
-         Left            =   11415
-         Style           =   1  'Graphical
-         TabIndex        =   48
          Top             =   660
          Width           =   2220
       End
@@ -239,22 +234,13 @@ Begin VB.Form Form_Emissor_NFe
          Left            =   9150
          Style           =   1  'Graphical
          TabIndex        =   33
-         Top             =   675
-         Width           =   2220
-      End
-      Begin VB.CommandButton cmd_Tudo 
-         Caption         =   "ENVIAR NF-e >>>>>"
-         Height          =   375
-         Left            =   6885
-         Style           =   1  'Graphical
-         TabIndex        =   47
          Top             =   660
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Consultar_NFe 
          Caption         =   "CONSULTAR NF-e"
          Height          =   375
-         Left            =   4590
+         Left            =   4635
          Style           =   1  'Graphical
          TabIndex        =   35
          Top             =   660
@@ -265,8 +251,8 @@ Begin VB.Form Form_Emissor_NFe
          Height          =   375
          Left            =   2340
          Style           =   1  'Graphical
-         TabIndex        =   49
-         Top             =   675
+         TabIndex        =   48
+         Top             =   660
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Imprimir_NFe 
@@ -308,10 +294,10 @@ Begin VB.Form Form_Emissor_NFe
       Begin VB.CommandButton cmd_Enviar_XML 
          Caption         =   "ENVIAR XML"
          Height          =   375
-         Left            =   4590
+         Left            =   4635
          Style           =   1  'Graphical
          TabIndex        =   3
-         Top             =   270
+         Top             =   240
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Assinar_XML 
@@ -320,7 +306,7 @@ Begin VB.Form Form_Emissor_NFe
          Left            =   2355
          Style           =   1  'Graphical
          TabIndex        =   2
-         Top             =   225
+         Top             =   240
          Width           =   2220
       End
       Begin VB.CommandButton cmd_Gerar_XML 
@@ -365,7 +351,7 @@ Begin VB.Form Form_Emissor_NFe
          TabIndex        =   26
          Text            =   "Templates\"
          Top             =   990
-         Width           =   7155
+         Width           =   7110
       End
       Begin VB.TextBox txt_Arq_Servidores 
          BackColor       =   &H00FBF7EE&
@@ -378,11 +364,11 @@ Begin VB.Form Form_Emissor_NFe
       Begin VB.TextBox txt_Arq_Logs 
          BackColor       =   &H00FBF7EE&
          Height          =   315
-         Left            =   7320
+         Left            =   7275
          TabIndex        =   24
          Text            =   "Log\"
          Top             =   990
-         Width           =   6255
+         Width           =   6300
       End
       Begin VB.Label Label4 
          AutoSize        =   -1  'True
@@ -415,7 +401,7 @@ Begin VB.Form Form_Emissor_NFe
          AutoSize        =   -1  'True
          Caption         =   "Log"
          Height          =   195
-         Left            =   7365
+         Left            =   7320
          TabIndex        =   28
          Top             =   780
          Width           =   270
@@ -453,7 +439,7 @@ Begin VB.Form Form_Emissor_NFe
          Left            =   60
          TabIndex        =   20
          Top             =   360
-         Width           =   13515
+         Width           =   13605
       End
       Begin VB.Label Label1 
          AutoSize        =   -1  'True
@@ -541,7 +527,7 @@ Begin VB.Form Form_Emissor_NFe
          PasswordChar    =   "*"
          TabIndex        =   7
          Top             =   450
-         Width           =   1095
+         Width           =   1185
       End
       Begin VB.Label Label7 
          AutoSize        =   -1  'True
@@ -615,7 +601,10 @@ Public spd_Text_Recibo As String
 Public spd_Text_Recibo_Retorno As String
 Public spd_Text_Chave As String
 Public spd_Text_Protocolo As String
+Public spd_Text_Numero_NFe As String
 Public spd_Text_Jus_Cancelamento As String
+Public spd_Text_Texto_CCorrecao As String
+
 
 Dim Arquivo As String
 Dim FSO As New FileSystemObject
@@ -640,31 +629,33 @@ Dim CaminhoRecibo As String
 Dim CaminhoEnvio As String
 
 
+
 Private Sub cmd_Alterar_Modelo_Danfe_Click()
 
 On Error GoTo Erro
 
 'Pegando Arquivo XML Autorizado. Precisamos dele para Referencia
 '---------------------------------------------------------------------------------------
-Common_ShowOpen_XML.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
-Common_ShowOpen_XML.FileName = App.Path
-Common_ShowOpen_XML.ShowOpen
+Form_Dialog.My_Dialog_1.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
+Form_Dialog.My_Dialog_1.FileName = App.Path
+Form_Dialog.My_Dialog_1.ShowOpen
 
-Caminho_XML_Autorizado = Common_ShowOpen_XML.FileName
+Caminho_XML_Autorizado = Form_Dialog.My_Dialog_1.FileName
                                                                                                                                    
 Set Arq_txt = FSO.OpenTextFile(Caminho_XML_Autorizado)
 Texto = Arq_txt.ReadAll
 
 'Pegando Arquivo RTM que será Editado
 '---------------------------------------------------------------------------------------
-Common_ShowOpen_XML.Filter = "Arquivo RTM (*.rtm)|*.rtm"
-Common_ShowOpen_XML.FileName = spd_NFe.ModeloRetrato
-Common_ShowOpen_XML.ShowOpen
+Form_Dialog.My_Dialog_1.Filter = "Arquivo RTM (*.rtm)|*.rtm"
+Form_Dialog.My_Dialog_1.FileName = spd_NFe.ModeloRetrato
+Form_Dialog.My_Dialog_1.ShowOpen
 
-Caminho_RTM = Common_ShowOpen_XML.FileName
+Caminho_RTM = Form_Dialog.My_Dialog_1.FileName
 
 memoRetorno.Text = spd_NFe.EditarModeloDanfe("0001", Texto, Caminho_RTM)
 
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -697,6 +688,7 @@ txt_IDNFe.Text = spd_Text_Chave
 
 cmd_Assinar_XML.Enabled = True
 
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -725,12 +717,12 @@ CaminhoEnvio = App.Path & "\XML_ASSINADO\" & spd_Text_Chave & "_Assinado_.xml"
 'CaminhoRecibo = spd_NFe.UltimoLogConsRecibo
 CaminhoRecibo = App.Path & "\XML_RECIBO\" & spd_Text_Chave & "_Recibo_.xml"
 
-Common_ShowSave.Filter = "Salvando XML Autorizado (*.xml)|*.xml"
-Common_ShowSave.FileName = App.Path & "\XML_AUTORIZADO\" & spd_Text_Chave & ".xml"
-Common_ShowSave.ShowSave
+Form_Dialog.My_Dialog_1.Filter = "Salvando XML Autorizado (*.xml)|*.xml"
+Form_Dialog.My_Dialog_1.FileName = App.Path & "\XML_AUTORIZADO\" & spd_Text_Chave & ".xml"
+Form_Dialog.My_Dialog_1.ShowSave
 
 Caminho = ""
-Caminho = Common_ShowSave.FileName
+Caminho = Form_Dialog.My_Dialog_1.FileName
 
 Caminho_XML_Autorizado = ""
 Caminho_XML_Autorizado = Caminho
@@ -742,6 +734,7 @@ MsgBox "Download de Arquivo Xml Completo!", vbInformation, " "
 
 'Depois é só salvar o xmlGerado no seu banco, pois essa função retorna o conteúdo do xml autorizado
 
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -757,12 +750,12 @@ On Error GoTo Erro
   
 Dim NotaXML As String
 
-Common_ShowOpen_XML.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
-Common_ShowOpen_XML.FileName = App.Path
-Common_ShowOpen_XML.ShowOpen
+Form_Dialog.My_Dialog_1.Filter = "Arquivo XML Autorizada (*.xml)|*.xml"
+Form_Dialog.My_Dialog_1.FileName = App.Path
+Form_Dialog.My_Dialog_1.ShowOpen
     
-Open Common_ShowOpen_XML.FileName For Input As #1
-NotaXML = Input(FileLen(Common_ShowOpen_XML.FileName), #1)
+Open Form_Dialog.My_Dialog_1.FileName For Input As #1
+NotaXML = Input(FileLen(Form_Dialog.My_Dialog_1.FileName), #1)
 memoRetorno.Text = NotaXML
 Close #1
   
@@ -775,16 +768,81 @@ Loop
   
 cmd_Cancelar_NFe.Enabled = False
   
-vRESP = MsgBox("Confirma o CANCELAMENTO dessa NF-e?", vbQuestion + vbYesNo + vbDefaultButton2, "Cancelando NF-e...")
+vRESP = MsgBox("Confirma o CANCELAMENTO da NF-e: [ " & spd_Text_Numero_NFe & " ] ?", vbQuestion + vbYesNo + vbDefaultButton2, "Cancelando NF-e...")
 If vRESP = vbYes Then
 
-    'Dispara Método que solicita Cancelamento da NFe e aguarda retorno.
-    memoRetorno.Text = spd_NFe.CancelarNF(txt_IDNFe.Text, txt_Protocolo.Text, spd_Text_Jus_Cancelamento)
-
+    'spdNFe.CancelarNFeEvento(edtChaveCancelamento.Text,edtProtocoloAutorizacao.Text, edtJustificativaCancelamento.Text,edtDataHoraCancela.Text,1,cbbFusoCancela.Text);
+    memoRetorno.Text = spd_NFe.CancelarNFeEvento(txt_IDNFe.Text, txt_Protocolo.Text, spd_Text_Jus_Cancelamento, Format(Now, "YYYY-MM-DDTHH:MM:SS"), 1, "-03:00")
+    
 End If
 
 cmd_Cancelar_NFe.Enabled = True
 
+Exit Sub
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+    cmd_Cancelar_NFe.Enabled = True
+End If
+
+End Sub
+
+
+Private Sub cmd_CCorrecao_Click()
+
+On Error GoTo Erro
+  
+Dim NotaXML As String
+Dim Sequencia As Integer
+
+Form_Dialog.My_Dialog_1.Filter = "Arquivo XML Autorizada (*.xml)|*.xml"
+Form_Dialog.My_Dialog_1.FileName = App.Path
+Form_Dialog.My_Dialog_1.ShowOpen
+    
+Open Form_Dialog.My_Dialog_1.FileName For Input As #1
+NotaXML = Input(FileLen(Form_Dialog.My_Dialog_1.FileName), #1)
+memoRetorno.Text = NotaXML
+Close #1
+  
+Carrega_Dados_NFe (memoRetorno.Text)
+  
+Do While Len(spd_Text_Texto_CCorrecao) < 15
+    spd_Text_Texto_CCorrecao = ""
+    spd_Text_Texto_CCorrecao = InputBox("Informe o Texto de Correção", "Carta de Correção NF-e")
+Loop
+  
+cmd_CCorrecao.Enabled = False
+  
+vRESP = MsgBox("Confirma a CARTA DE CORREÇÃO da NF-e: [ " & spd_Text_Numero_NFe & " ] ?", vbQuestion + vbYesNo + vbDefaultButton2, "CC NF-e...")
+If vRESP = vbYes Then
+
+    Sequencia = InputBox("Informe a Sequencia do Evento", "Carta de Correção NF-e", "1")
+
+    'Exemplo:
+    
+    'EnviarCCe(aNotaID, aTextoCorrecao, aDataHoraEvento, aOrgao, aIdLote, aSequenciaEvento);
+    
+    'spdNFe.EnviarCCe "41151208187168000160550010000394161416403149", "Texto de correção da nota com "
+    'no mínimo 15 dígitos", Format(Now(), "yyyy-mm-ddThh:mm:ss"), "41", "1", 001, "-03:00"
+
+    'http://docs.tecnospeed.com.br/NFe/9-CCe/
+
+    memoRetorno.Text = spd_NFe.EnviarCCe(txt_IDNFe.Text, spd_Text_Texto_CCorrecao, Format(Now, "yyyy-mm-ddThh:mm:ss"), "35", "1", Sequencia, "-03:00")
+    
+End If
+
+If Mid$(memoRetorno.Text, InStrRev(memoRetorno.Text, "<xMotivo>") + 9, 36) = "Evento registrado e vinculado a NF-e" Then
+
+    MsgBox Mid$(memoRetorno.Text, InStrRev(memoRetorno.Text, "<xMotivo>") + 9, 36), vbInformation, " "
+
+Else
+    
+End If
+
+cmd_CCorrecao.Enabled = True
+
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -813,6 +871,7 @@ MsgBox Mid$(memoRetorno.Text, InStrRev(memoRetorno.Text, "<xMotivo>") + 9, 24), 
 
 cmd_Consultar_NFe.Enabled = True
 
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -879,6 +938,7 @@ MsgBox Mid$(spd_Text_Recibo_Retorno, Inicio_Texto + 9, Cont_Texto), vbInformatio
 
 cmd_Consultar_Recibo.Enabled = True
 
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -903,6 +963,7 @@ MsgBox Mid$(spd_Text_Retorno, InStrRev(spd_Text_Retorno, "<xMotivo>") + 9, 19), 
 
 cmd_Consultar_Situacao.Enabled = True
 
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -947,12 +1008,16 @@ Dim LogConsRec As String
   
 ''Captura as configurações que estão nos TextBox e Seta para o Componente - Isso pode ser Feito Direto na Inicialização
 
+'spd_NFe.EmailTimeOut = 30
+
+'spd_NFe.EmailAutenticacao = True
+
 spd_NFe.EmailAutenticacao = True
 spd_NFe.EmailRemetente = spd_NFe.EmailRemetente
 spd_NFe.EmailServidor = spd_NFe.EmailServidor
 spd_NFe.EmailUsuario = spd_NFe.EmailUsuario
 spd_NFe.EmailSenha = spd_NFe.EmailSenha
-spd_NFe.EmailPorta = "465"
+spd_NFe.EmailPorta = "587"
 
 spd_NFe.ArquivoServidoresHom = spd_NFe.ArquivoServidoresHom
 spd_NFe.ArquivoServidoresProd = spd_NFe.ArquivoServidoresProd
@@ -972,7 +1037,6 @@ CaminhoRecibo = App.Path & "\XML_RECIBO\" & spd_Text_Chave & "_Recibo_.xml"
 'LogEnv = InputBox("Arquivo LOG de Envio", App.Title, "")
 'LogConsRec = InputBox("Arquivo LOG de Consulta de Recibo", App.Title, "")
 
-
 cmd_Enviar_Email.Enabled = False
 
 memoRetorno.Text = spd_NFe.EnviarNotaDestinatario(spd_Text_Chave, CaminhoEnvio, CaminhoRecibo)
@@ -981,6 +1045,7 @@ MsgBox "Email Enviado com Exito", vbInformation, " "
 
 cmd_Enviar_Email.Enabled = True
 
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -990,6 +1055,12 @@ End If
 
 End Sub
 
+
+Private Sub cmd_Enviar_WS_Sefaz_Click()
+
+ENVIAR_NFe_PARA_SEFAZ
+
+End Sub
 
 Private Sub cmd_Enviar_XML_Click()
 
@@ -1040,6 +1111,7 @@ Caminho = App.Path & "\XML_RECIBO\" & spd_Text_Chave & "_Recibo_.xml"
 
 cmd_Enviar_XML.Enabled = True
 
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -1054,17 +1126,21 @@ Private Sub cmd_Gerar_XML_Click()
 
 On Error GoTo Erro
 
+txt_Recibo.Text = ""
+txt_Protocolo.Text = ""
+txt_IDNFe.Text = ""
+
 spd_Text_Retorno_XML = ""
 
-Common_ShowOpen.Filter = "Arquivo txt (*.txt)|*.txt"
-Common_ShowOpen.FileName = App.Path
-Common_ShowOpen.ShowOpen
+Form_Dialog.My_Dialog_1.Filter = "Arquivo txt (*.txt)|*.txt"
+Form_Dialog.My_Dialog_1.FileName = App.Path
+Form_Dialog.My_Dialog_1.ShowOpen
 
-If Common_ShowOpen.FileName <> "" Then
+If Form_Dialog.My_Dialog_1.FileName <> "" Then
 
-    Open Common_ShowOpen.FileName For Input As #1
+    Open Form_Dialog.My_Dialog_1.FileName For Input As #1
 
-    Nota = Input(FileLen(Common_ShowOpen.FileName), #1)
+    Nota = Input(FileLen(Form_Dialog.My_Dialog_1.FileName), #1)
 
     spd_Text_Retorno_XML = Trim(spd_NFe.ConverterLoteParaXML(Nota, lkRec, "pl_008h"))
     memoRetorno.Text = spd_Text_Retorno_XML
@@ -1073,6 +1149,7 @@ If Common_ShowOpen.FileName <> "" Then
 
 End If
 
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -1087,16 +1164,17 @@ Private Sub cmd_Imprimir_NFe_Click()
 
 On Error GoTo Erro
 
-Common_ShowOpen_XML.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
-Common_ShowOpen_XML.FileName = App.Path
-Common_ShowOpen_XML.ShowOpen
+Form_Dialog.My_Dialog_1.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
+Form_Dialog.My_Dialog_1.FileName = App.Path & "\GESTOR_EMISSOR_NFe"
+Form_Dialog.My_Dialog_1.ShowOpen
 
-Arquivo = Common_ShowOpen_XML.FileName                                            'Carrega o arquivo gerado na pasta XML Destinatario que possui Numero de Protocolo e Numero de Autorização
+Arquivo = Form_Dialog.My_Dialog_1.FileName                                            'Carrega o arquivo gerado na pasta XML Destinatario que possui Numero de Protocolo e Numero de Autorização
                                                                            
 Set Arq_txt = FSO.OpenTextFile(Arquivo)
 Texto = Arq_txt.ReadAll
 memoRetorno.Text = spd_NFe.ImprimirDanfe("0000001", Texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50a\Danfe\retrato.rtm", "")
 
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -1115,31 +1193,21 @@ MsgBox "Configurações Salvas com Exito", vbInformation, " "
 End Sub
 
 
-Private Sub cmd_Tudo_Click()
-
-cmd_Tudo.Enabled = False
-
-ENVIAR_NFe_PARA_SEFAZ_COMBO_FUNCOES
-
-cmd_Tudo.Enabled = True
-
-End Sub
-
-
 Private Sub cmd_Visualizar_NFe_Click()
 
 On Error GoTo Erro
 
-Common_ShowOpen_XML.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
-Common_ShowOpen_XML.FileName = App.Path & "\XML_AUTORIZADO"
-Common_ShowOpen_XML.ShowOpen
+Form_Dialog.My_Dialog_1.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
+Form_Dialog.My_Dialog_1.FileName = App.Path & "\XML_AUTORIZADO"
+Form_Dialog.My_Dialog_1.ShowOpen
 
-Arquivo = Common_ShowOpen_XML.FileName                                            'Carrega o arquivo gerado na pasta XML Destinatario que possui Numero de Protocolo e Numero de Autorização
+Arquivo = Form_Dialog.My_Dialog_1.FileName                                            'Carrega o arquivo gerado na pasta XML Destinatario que possui Numero de Protocolo e Numero de Autorização
                                                                            
 Set Arq_txt = FSO.OpenTextFile(Arquivo)
 Texto = Arq_txt.ReadAll
 memoRetorno.Text = spd_NFe.VisualizarDanfe("0000001", Texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50\Danfe\retrato.rtm")
 
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -1147,6 +1215,7 @@ If Err.Number <> 0 Then
 End If
 
 End Sub
+
 
 
 
@@ -1230,8 +1299,13 @@ End Sub
 
 Sub Carrega_Dados_NFe(XML_Retorno As String)
 
+spd_Text_Numero_NFe = ""
+txt_Protocolo.Text = ""
+txt_IDNFe.Text = ""
+
 txt_Protocolo.Text = Mid$(memoRetorno.Text, InStrRev(memoRetorno.Text, "<nProt>") + 7, 15)
 txt_IDNFe.Text = Mid$(memoRetorno.Text, InStrRev(memoRetorno.Text, "<chNFe>") + 7, 44)
+spd_Text_Numero_NFe = Mid$(memoRetorno.Text, InStrRev(memoRetorno.Text, "<cNF>") + 5, 8)
 
 End Sub
 
@@ -1264,6 +1338,7 @@ Set Arq_txt = FSO.OpenTextFile(Caminho_XML_Autorizado)
 Texto = Arq_txt.ReadAll
 memoRetorno.Text = spd_NFe.VisualizarDanfe("0000001", Texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50\Danfe\retrato.rtm")
 
+Exit Sub
 'Tratamento de Erro
 Erro:
 If Err.Number <> 0 Then
@@ -1273,6 +1348,222 @@ End If
 End Sub
 
 
+Sub ENVIAR_NFe_PARA_SEFAZ()
+
+On Error GoTo Erro
+
+'-----------------------------------------------------------------------------------------------------------------------
+'GERANDO O PRIMEIRO XML (AINDA INCOMPLETO)
+'-----------------------------------------------------------------------------------------------------------------------
+
+txt_Recibo.Text = ""
+txt_Protocolo.Text = ""
+txt_IDNFe.Text = ""
+
+spd_Text_Retorno_XML = ""
+
+Form_Dialog.My_Dialog_1.Filter = "Arquivo txt (*.txt)|*.txt"
+Form_Dialog.My_Dialog_1.FileName = App.Path
+Form_Dialog.My_Dialog_1.ShowOpen
+
+If Form_Dialog.My_Dialog_1.FileName <> "" Then
+
+    Open Form_Dialog.My_Dialog_1.FileName For Input As #1
+
+    Nota = Input(FileLen(Form_Dialog.My_Dialog_1.FileName), #1)
+
+    spd_Text_Retorno_XML = Trim(spd_NFe.ConverterLoteParaXML(Nota, lkRec, "pl_008h"))
+    
+    'Retirar
+    memoRetorno.Text = spd_Text_Retorno_XML
+    'MsgBox "XML Gerado com Exito!", vbInformation, " "
+
+    Close #1
+
+End If
+
+
+'-----------------------------------------------------------------------------------------------------------------------
+'GERANDO O XML ASSINADO (AGORA SIM COMPLETO)
+'-----------------------------------------------------------------------------------------------------------------------
+
+spd_Text_Retorno_XML_Assinado = ""
+spd_Text_Chave = ""
+
+spd_Text_Retorno_XML_Assinado = Trim(spd_NFe.AssinarNota(spd_Text_Retorno_XML))
+
+'Retirar
+memoRetorno.Text = spd_Text_Retorno_XML_Assinado
+
+spd_Text_Chave = Mid$(spd_Text_Retorno_XML_Assinado, InStrRev(spd_Text_Retorno_XML_Assinado, "<infNFe Id=") + 15, 44)
+
+'Retirar
+txt_IDNFe.Text = spd_Text_Chave
+'MsgBox "XML Assinado com Exito!", vbInformation, " "
+
+
+'-----------------------------------------------------------------------------------------------------------------------
+'ENVIADO O XML ASSINATO PARA A WS DO SEFAZ
+'-----------------------------------------------------------------------------------------------------------------------
+
+spd_Text_Retorno_XML_Enviado = ""
+spd_Text_Recibo = ""
+Caminho_Envio = ""
+Caminho_Recibo = ""
+Caminho = ""
+
+'Alterar aqui e pegar o Número do Lote
+spd_Text_Retorno_XML_Enviado = spd_NFe.EnviarNF("000001", Trim(spd_Text_Retorno_XML_Assinado), False)
+
+'Retirar
+memoRetorno.Text = spd_Text_Retorno_XML_Enviado
+
+'Copia o Numero do Recibo do XML Enviado para o edRecibo
+
+spd_Text_Recibo = Mid$(spd_Text_Retorno_XML_Enviado, InStrRev(spd_Text_Retorno_XML_Enviado, "<nRec>") + 6, 15)
+txt_Recibo.Text = spd_Text_Recibo
+
+Caminho_Envio = spd_NFe.UltimoLogEnvio
+Caminho_Recibo = spd_NFe.UltimoLogRecibo
+
+Caminho = App.Path & "\XML_ASSINADO\" & spd_Text_Chave & "_Assinado_.xml"
+
+'Copiando Arquivo .XML (Se ele já existir, substitui)
+FSO.CopyFile Caminho_Envio, Caminho, True
+
+Caminho = App.Path & "\XML_RECIBO\" & spd_Text_Chave & "_Recibo_.xml"
+
+'Copiando Arquivo .XML (Se ele já existir, substitui)
+FSO.CopyFile Caminho_Recibo, Caminho, True
+
+'MsgBox "XML Enviado com Exito!", vbInformation, " "
+
+
+'-----------------------------------------------------------------------------------------------------------------------
+'CONSULTANDO O RECIDO E SE A NOTA FISCAL ESTÁ AUTORIZADA
+'-----------------------------------------------------------------------------------------------------------------------
+
+spd_Text_Recibo_Retorno = ""
+spd_Text_Protocolo = ""
+spd_Text_Chave = ""
+Caminho_Recibo = ""
+Caminho = ""
+
+spd_Text_Recibo_Retorno = spd_NFe.ConsultarRecibo(spd_Text_Recibo)
+    
+'Retirar
+memoRetorno.Text = spd_Text_Recibo_Retorno
+
+Inicio_Texto = InStrRev(spd_Text_Recibo_Retorno, "<xMotivo>")
+Fim_Texto = InStrRev(spd_Text_Recibo_Retorno, "</xMotivo>")
+Cont_Texto = Fim_Texto - Inicio_Texto - 9
+
+spd_Text_Chave = Mid$(spd_Text_Recibo_Retorno, InStrRev(spd_Text_Recibo_Retorno, "<chNFe>") + 7, 44)
+
+'Retirar
+txt_IDNFe.Text = spd_Text_Chave
+
+Caminho_Recibo = spd_NFe.UltimoLogConsRecibo
+
+Caminho = App.Path & "\XML_RECIBO\" & spd_Text_Chave & "_Recibo_.xml"
+
+'Copiando Arquivo .XML (Se ele já existir, substitui)
+FSO.CopyFile Caminho_Recibo, Caminho, True
+
+'MsgBox Mid$(spd_Text_Recibo_Retorno, Inicio_Texto + 9, Cont_Texto), vbInformation, " "
+
+
+'-----------------------------------------------------------------------------------------------------------------------
+'DOWNLOAD DO XML AUTORIZADO
+'-----------------------------------------------------------------------------------------------------------------------
+
+spd_Text_Retorno_XML_Retornado = ""
+CaminhoEnvio = ""
+CaminhoRecibo = ""
+Caminho = ""
+Caminho_XML_Autorizado = ""
+
+CaminhoEnvio = App.Path & "\XML_ASSINADO\" & spd_Text_Chave & "_Assinado_.xml"
+
+CaminhoRecibo = App.Path & "\XML_RECIBO\" & spd_Text_Chave & "_Recibo_.xml"
+
+Form_Dialog.My_Dialog_1.Filter = "Salvando XML Autorizado (*.xml)|*.xml"
+Form_Dialog.My_Dialog_1.FileName = App.Path & "\XML_AUTORIZADO\" & spd_Text_Chave & ".xml"
+'''form_Dialog.My_Dialog_1.ShowSave
+
+Caminho = Form_Dialog.My_Dialog_1.FileName
+
+Caminho_XML_Autorizado = Caminho
+
+spd_Text_Retorno_XML_Retornado = spd_NFe.GeraXMLEnvioDestinatario(spd_Text_Chave, CaminhoEnvio, CaminhoRecibo, Caminho)
+
+'Retirar
+memoRetorno.Text = spd_Text_Retorno_XML_Retornado
+
+'MsgBox "Download de Arquivo Xml Completo!", vbInformation, " "
+
+'-----------------------------------------------------------------------------------------------------------------------
+'VISUALIZAR DANFE PELO XML AUTORIZADO
+'-----------------------------------------------------------------------------------------------------------------------
+
+Arquivo = ""
+
+'''form_Dialog.My_Dialog_1.Filter = "Arquivo XML Retornada (*.xml)|*.xml"
+'''form_Dialog.My_Dialog_1.FileName = App.Path & "\XML_AUTORIZADO"
+'''form_Dialog.My_Dialog_1.ShowOpen
+
+'''Arquivo = Common_ShowOpen_XML.FileName      'Carrega o arquivo gerado na pasta XML Destinatario que possui Numero de Protocolo e Numero de Autorização
+Arquivo = App.Path & "\XML_AUTORIZADO\" & spd_Text_Chave & ".xml"
+                                                                                                                                                 
+Set Arq_txt = FSO.OpenTextFile(Arquivo)
+Texto = Arq_txt.ReadAll
+
+'Retirar
+memoRetorno.Text = spd_NFe.VisualizarDanfe("0000001", Texto, App.Path & "\TecnoSpeed_Arquivos\Templates\vm50\Danfe\retrato.rtm")
+
+
+'-----------------------------------------------------------------------------------------------------------------------
+'ENVIANDO EMAIL CASO O USUÁRIO QUEIRA
+'-----------------------------------------------------------------------------------------------------------------------
 
 
 
+
+
+
+
+
+
+'-----------------------------------------------------------------------------------------------------------------------
+'
+'-----------------------------------------------------------------------------------------------------------------------
+
+
+Exit Sub
+'Tratamento de Erro
+Erro:
+If Err.Number <> 0 Then
+    MsgBox Err.Number & " " & Err.Description, vbCritical, "ERRO"
+    Close #1
+End If
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Private Sub Form_Unload(Cancel As Integer)
+End
+End Sub
